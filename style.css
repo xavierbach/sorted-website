@@ -76,12 +76,16 @@ nav {
 .nav-logo-icon {
   width: 36px;
   height: 36px;
-  background: var(--orange);
   border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.nav-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .nav-links {
@@ -233,8 +237,18 @@ nav {
 }
 
 .phone-screen-icon {
-  font-size: 3rem;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  overflow: hidden;
   margin-bottom: 6px;
+}
+
+.phone-screen-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .phone-screen-title {
@@ -454,12 +468,16 @@ footer {
 .footer-logo-icon {
   width: 28px;
   height: 28px;
-  background: var(--orange);
   border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.footer-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .footer-links {
