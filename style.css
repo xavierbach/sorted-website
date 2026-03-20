@@ -167,58 +167,44 @@ nav {
   overflow: hidden;
 }
 
-/* Animated cycling word */
+/* Animated cycling word — single scrolling track, no pauses */
 .eyebrow-cycle {
-  position: relative;
   display: inline-block;
-  width: 9em;
-  height: 1.1em;
+  height: 1.2em;
   overflow: hidden;
-  /* Safari doesn't clip transformed absolute children with overflow:hidden alone */
   -webkit-clip-path: inset(0);
   clip-path: inset(0);
   vertical-align: middle;
-  margin-bottom: -0.08em;
+  margin-bottom: -0.1em;
 }
 
-.eyebrow-cycle span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  -webkit-transform: translateY(110%);
-  transform: translateY(110%);
-  -webkit-animation: cycle-word 15s linear infinite;
-  animation: cycle-word 15s linear infinite;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+.eyebrow-track {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  will-change: transform;
+  -webkit-animation: scroll-track 14s linear infinite;
+  animation: scroll-track 14s linear infinite;
+}
+
+.eyebrow-track span {
+  display: block;
+  height: 1.2em;
+  line-height: 1.2em;
   white-space: nowrap;
   color: var(--orange);
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
-/* Each word gets a 2.5s window in a 15s cycle */
-.eyebrow-cycle span:nth-child(1) { -webkit-animation-delay:  0s;    animation-delay:  0s;    }
-.eyebrow-cycle span:nth-child(2) { -webkit-animation-delay:  2.5s;  animation-delay:  2.5s;  }
-.eyebrow-cycle span:nth-child(3) { -webkit-animation-delay:  5s;    animation-delay:  5s;    }
-.eyebrow-cycle span:nth-child(4) { -webkit-animation-delay:  7.5s;  animation-delay:  7.5s;  }
-.eyebrow-cycle span:nth-child(5) { -webkit-animation-delay:  10s;   animation-delay:  10s;   }
-.eyebrow-cycle span:nth-child(6) { -webkit-animation-delay:  12.5s; animation-delay:  12.5s; }
-
-@-webkit-keyframes cycle-word {
-  0%     { opacity: 0; -webkit-transform: translateY(110%);  }
-  8%     { opacity: 1; -webkit-transform: translateY(0);      }
-  14.7%  { opacity: 1; -webkit-transform: translateY(0);      }
-  20%    { opacity: 0; -webkit-transform: translateY(-110%);  }
-  20.01% { opacity: 0; -webkit-transform: translateY(110%);   }
-  100%   { opacity: 0; -webkit-transform: translateY(110%);   }
+@-webkit-keyframes scroll-track {
+  from { -webkit-transform: translateY(0);            transform: translateY(0); }
+  to   { -webkit-transform: translateY(calc(-6 * 1.2em)); transform: translateY(calc(-6 * 1.2em)); }
 }
-@keyframes cycle-word {
-  0%     { opacity: 0; transform: translateY(110%);  }
-  8%     { opacity: 1; transform: translateY(0);      }
-  14.7%  { opacity: 1; transform: translateY(0);      }
-  20%    { opacity: 0; transform: translateY(-110%);  }
-  20.01% { opacity: 0; transform: translateY(110%);   }
-  100%   { opacity: 0; transform: translateY(110%);   }
+@keyframes scroll-track {
+  from { transform: translateY(0); }
+  to   { transform: translateY(calc(-6 * 1.2em)); }
 }
 
 .hero h1 {
@@ -267,9 +253,12 @@ nav {
 
 .hero-phone-frame {
   width: 272px;
+  max-width: 272px;
+  flex-shrink: 0;
   border-radius: 50px;
   background: var(--choc);
   padding: 10px;
+  overflow: hidden;        /* hard clip — image cannot escape the frame */
   box-shadow:
     0 0 0 1px rgba(255,255,255,0.06),
     0 24px 64px rgba(28,8,0,0.28),
@@ -278,12 +267,14 @@ nav {
 
 .hero-phone-frame img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 42px;
   display: block;
 }
 
 @media (max-width: 640px) {
-  .hero-phone-frame { width: 220px; border-radius: 40px; padding: 8px; }
+  .hero-phone-frame { width: 220px; max-width: 220px; border-radius: 40px; padding: 8px; }
   .hero-phone-frame img { border-radius: 34px; }
 }
 
