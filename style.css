@@ -338,7 +338,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.step-icon { font-size: 2rem; margin-bottom: 14px; line-height: 1; color: var(--accent); }
+.step-icon { font-size: 2rem; margin-bottom: 14px; line-height: 1; color: var(--orange); }
 
 .step h3 {
   font-size: 1.05rem;
@@ -382,7 +382,7 @@ nav {
   margin-bottom: 16px;
   display: block;
   line-height: 1;
-  color: var(--accent);
+  color: var(--orange);
 }
 
 .feature-card h3 {
@@ -436,6 +436,81 @@ nav {
   transform: translateY(-2px);
   box-shadow: 0 6px 24px rgba(28,8,0,0.15);
   color: var(--orange-dark);
+}
+
+/* ── CTA cycling word ─────────────────────────────────────────────────────── */
+
+.cta-cycle-wrap {
+  display: inline-block;
+  position: relative;
+}
+
+.cta-cycle {
+  display: inline-block;
+  height: 1.15em;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-bottom: -0.1em;
+}
+
+.cta-cycle-track {
+  display: flex;
+  flex-direction: column;
+  animation: cta-scroll 2.4s linear infinite;
+  will-change: transform;
+}
+
+.cta-cycle-track span {
+  display: block;
+  height: 1.15em;
+  line-height: 1.15em;
+  white-space: nowrap;
+  color: rgba(255,255,255,0.95);
+  font-style: italic;
+}
+
+@keyframes cta-scroll {
+  from { transform: translateY(0); }
+  to   { transform: translateY(calc(-5 * 1.15em)); }
+}
+
+/* ── Scroll-to-footer indicator ───────────────────────────────────────────── */
+
+.scroll-to-footer {
+  background: var(--choc);
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  height: 0;
+  position: relative;
+}
+
+.scroll-down-btn {
+  position: absolute;
+  top: -22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--choc);
+  color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+  animation: bounce-down 1.8s ease-in-out infinite;
+}
+
+.scroll-down-btn:hover {
+  color: var(--orange);
+  transform: translateY(3px);
+  animation: none;
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
 }
 
 /* ── Footer ───────────────────────────────────────────────────────────────── */
