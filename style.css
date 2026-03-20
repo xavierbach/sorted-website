@@ -152,17 +152,56 @@ nav {
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: var(--orange-light);
   border: 1px solid rgba(249,115,22,0.2);
   color: var(--orange-dark);
   font-size: 0.82rem;
-  font-weight: 600;
-  padding: 5px 14px;
+  font-weight: 700;
+  padding: 7px 18px;
   border-radius: 50px;
   margin-bottom: 24px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  overflow: hidden;
+}
+
+/* Animated cycling word */
+.eyebrow-cycle {
+  position: relative;
+  display: inline-block;
+  width: 9em;        /* wide enough for BUSY PEOPLE */
+  height: 1em;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-bottom: -0.05em; /* optical alignment */
+}
+
+.eyebrow-cycle span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(120%);
+  animation: cycle-word 12s ease-in-out infinite;
+  white-space: nowrap;
+  color: var(--orange);
+}
+
+.eyebrow-cycle span:nth-child(1) { animation-delay:  0s; }
+.eyebrow-cycle span:nth-child(2) { animation-delay:  2s; }
+.eyebrow-cycle span:nth-child(3) { animation-delay:  4s; }
+.eyebrow-cycle span:nth-child(4) { animation-delay:  6s; }
+.eyebrow-cycle span:nth-child(5) { animation-delay:  8s; }
+.eyebrow-cycle span:nth-child(6) { animation-delay: 10s; }
+
+@keyframes cycle-word {
+  /*  Slide up in, hold, slide up out, stay hidden for remaining 10/12s */
+  0%      { opacity: 0; transform: translateY(120%); }
+  4%      { opacity: 1; transform: translateY(0);    }
+  13%     { opacity: 1; transform: translateY(0);    }
+  17%     { opacity: 0; transform: translateY(-120%);}
+  100%    { opacity: 0; transform: translateY(-120%);}
 }
 
 .hero h1 {
