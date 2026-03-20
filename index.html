@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorted — School Newsletters, Sorted.</title>
+  <meta name="description" content="Sorted uses AI to read your school newsletter and add every event straight to your calendar. Never miss a school event again." />
+  <meta property="og:title" content="Sorted — School Newsletters, Sorted." />
+  <meta property="og:description" content="AI-powered school newsletter reader for Australian parents. Import events to your calendar in seconds." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon: orange circle with 🍊 — replace with your real icon later -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍊</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────────── -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">🍊</div>
+        Sorted
+      </a>
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li>
+          <a href="#download" class="btn btn-primary" style="padding:8px 18px;">
+            Download Free
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">🇦🇺 Made for Australian parents</div>
+      <h1>School newsletters,<br><span>sorted.</span></h1>
+      <p class="hero-sub">
+        Snap a photo or share a PDF of your school newsletter and Sorted
+        automatically adds every event straight to your iPhone calendar.
+        Powered by AI. Takes seconds.
+      </p>
+      <div class="hero-actions">
+        <a href="#download" class="appstore-badge" id="download">
+          <!-- Apple App Store badge SVG inline so no external dependency -->
+          <svg width="156" height="52" viewBox="0 0 156 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="156" height="52" rx="10" fill="#000"/>
+            <text x="50" y="20" font-family="-apple-system,sans-serif" font-size="9" fill="white" opacity="0.8">Download on the</text>
+            <text x="44" y="37" font-family="-apple-system,sans-serif" font-size="18" font-weight="600" fill="white">App Store</text>
+            <text x="18" y="36" font-family="-apple-system,sans-serif" font-size="28" fill="white"></text>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="phone-mockup">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-screen-icon">🍊</div>
+            <div class="phone-screen-title">3 events found</div>
+
+            <div class="phone-event-card">
+              <div class="phone-event-dot" style="background:#F97316"></div>
+              <div class="phone-event-text">
+                <div class="phone-event-name">🏃 Sports Carnival</div>
+                <div class="phone-event-date">Fri 14 Mar · All day</div>
+              </div>
+            </div>
+
+            <div class="phone-event-card">
+              <div class="phone-event-dot" style="background:#6B8F71"></div>
+              <div class="phone-event-text">
+                <div class="phone-event-name">🚌 Year 4 Excursion</div>
+                <div class="phone-event-date">Tue 18 Mar · All day</div>
+              </div>
+            </div>
+
+            <div class="phone-event-card">
+              <div class="phone-event-dot" style="background:#F97316"></div>
+              <div class="phone-event-text">
+                <div class="phone-event-name">📋 Parent–Teacher</div>
+                <div class="phone-event-date">Wed 26 Mar · 4:00 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How it works ──────────────────────────────────────────────────── -->
+  <section class="how" id="how-it-works">
+    <div class="container">
+      <div class="section-label">How it works</div>
+      <h2 class="section-title">From newsletter to calendar<br>in three taps</h2>
+      <p class="section-sub">No more manually copying dates. Sorted does the reading so you don't have to.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-icon">📄</div>
+          <h3>Share your newsletter</h3>
+          <p>Share a PDF or photo from your Files app, Camera, or Email. Works with any school newsletter format.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-icon">✨</div>
+          <h3>AI reads it for you</h3>
+          <p>Sorted scans the newsletter and pulls out every event, date, and time — even from scanned pages.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-icon">📅</div>
+          <h3>Review &amp; save</h3>
+          <p>Tap the events you want to keep and hit Save. They land straight in your iPhone Calendar with optional reminders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ──────────────────────────────────────────────────────── -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Everything a busy parent needs</h2>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🤖</span>
+          <h3>AI-powered extraction</h3>
+          <p>Uses advanced AI to read newsletters accurately, even when dates are written in natural language like "the last Friday of term".</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📸</span>
+          <h3>Photos &amp; PDFs</h3>
+          <p>Works with printed newsletters you've photographed, digital PDFs, and even scanned documents that are just images.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">👨‍👩‍👧‍👦</span>
+          <h3>Multiple children</h3>
+          <p>Set up profiles for each child and assign events directly to their calendar. Perfect for families at different schools.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔔</span>
+          <h3>Smart reminders</h3>
+          <p>Choose to get reminders 1 day, 3 days, or a week before each event — automatically added when you save.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">😊</span>
+          <h3>Emoji event titles</h3>
+          <p>Sorted adds a matching emoji to event titles so your calendar is instantly scannable — 🏃 Sports Carnival, 🚌 Excursion, and more.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔒</span>
+          <h3>Private by design</h3>
+          <p>Your data is never stored on our servers. Newsletter content is processed and immediately discarded. No accounts, no tracking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────────────────── -->
+  <section class="cta">
+    <div class="container">
+      <h2>Stop missing school events.</h2>
+      <p>Free to download. No account needed.</p>
+      <a href="#download" class="btn-white">Download on the App Store</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">
+        <div class="footer-logo-icon">🍊</div>
+        Sorted
+      </a>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <span>© 2026 Thorley Park. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

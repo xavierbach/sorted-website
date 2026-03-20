@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Sorted</title>
+  <meta name="description" content="Privacy Policy for Sorted — the school newsletter calendar app." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍊</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────────── -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">🍊</div>
+        Sorted
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#how-it-works">How it works</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <div class="prose-hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: March 2026</p>
+    </div>
+  </div>
+
+  <!-- ── Body ─────────────────────────────────────────────────────────── -->
+  <div class="prose-body">
+
+    <div class="info-box">
+      <strong>Short version:</strong> Sorted does not collect, store, or sell any personal data.
+      Your newsletter content is processed in real time and immediately discarded. No account is required.
+    </div>
+
+    <h2>1. About this policy</h2>
+    <p>
+      This Privacy Policy explains how Thorley Park ("we", "us", "our") handles information
+      when you use the <strong>Sorted</strong> app for iPhone ("the app"). We are committed
+      to protecting your privacy and handling any information transparently.
+    </p>
+
+    <h2>2. Information we do not collect</h2>
+    <p>We do <strong>not</strong> collect, store, or have access to:</p>
+    <ul>
+      <li>Your name, email address, or any contact details</li>
+      <li>Your Apple ID or account information</li>
+      <li>Your location</li>
+      <li>Any analytics, crash reports, or usage statistics</li>
+      <li>Your calendar events or calendar data</li>
+      <li>The content of newsletters you import after processing is complete</li>
+    </ul>
+    <p>There is no user account system. Nothing you do in the app is tied to an identity we hold.</p>
+
+    <h2>3. Calendar access</h2>
+    <p>
+      Sorted requests permission to read and write to your iPhone Calendar (via Apple's EventKit framework).
+      This access is used solely to save events you choose to add. We do not read, transmit, or store
+      your existing calendar data. Calendar data never leaves your device.
+    </p>
+
+    <h2>4. Newsletter content and AI processing</h2>
+    <p>
+      When you import a newsletter, its text or images are sent to our secure processing proxy
+      (hosted on Cloudflare Workers) which forwards the content to Anthropic's Claude API to
+      extract event information.
+    </p>
+    <ul>
+      <li>Newsletter content is transmitted over an encrypted HTTPS connection</li>
+      <li>Content is processed in real time and is <strong>not stored</strong> on our servers or Cloudflare's infrastructure after processing</li>
+      <li>We do not use your newsletter content to train AI models</li>
+      <li>Anthropic's data handling is governed by <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic's Privacy Policy</a></li>
+    </ul>
+    <p>
+      The proxy uses a shared secret to verify requests come from the Sorted app.
+      Your Anthropic API key is never exposed to the app or stored on your device.
+    </p>
+
+    <h2>5. Data stored on your device</h2>
+    <p>
+      Sorted stores the following data <strong>locally on your device only</strong>,
+      using Apple's standard secure storage (UserDefaults and app sandbox):
+    </p>
+    <ul>
+      <li>Child profile names and colours you have set up</li>
+      <li>Events you have saved through the app</li>
+      <li>Your in-app settings and preferences</li>
+      <li>Import usage count (for the free tier)</li>
+    </ul>
+    <p>
+      This data is private to your device and is not transmitted to us or any third party.
+      It may be included in iCloud backups if you have iCloud Backup enabled — this is
+      controlled by your iPhone settings, not Sorted.
+    </p>
+
+    <h2>6. Purchases and subscriptions</h2>
+    <p>
+      In-app purchases are handled entirely by Apple through the App Store. We do not
+      receive or store your payment information. Purchase records are managed by
+      Apple's StoreKit and are subject to
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.
+    </p>
+
+    <h2>7. Third-party services</h2>
+    <p>Sorted uses the following third-party services:</p>
+    <ul>
+      <li>
+        <strong>Anthropic Claude API</strong> — AI processing of newsletter content.
+        <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy →</a>
+      </li>
+      <li>
+        <strong>Cloudflare Workers</strong> — Secure proxy for API requests.
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy →</a>
+      </li>
+      <li>
+        <strong>Apple App Store / StoreKit</strong> — In-app purchases.
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy →</a>
+      </li>
+    </ul>
+    <p>We do not use any advertising networks, analytics SDKs, or tracking frameworks.</p>
+
+    <h2>8. Children's privacy</h2>
+    <p>
+      Sorted is designed for use by parents and guardians. The app does not knowingly
+      collect any personal information from children. Child profile information (names
+      and colours) entered by parents is stored only on the local device and is never
+      transmitted to us.
+    </p>
+
+    <h2>9. Data retention and deletion</h2>
+    <p>
+      Because we do not collect personal data, there is nothing for us to delete.
+      All data stored by Sorted lives on your device. You can delete all app data
+      at any time by deleting the Sorted app from your iPhone.
+    </p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will be posted
+      on this page with an updated date. Continued use of the app after changes
+      constitutes acceptance of the updated policy.
+    </p>
+
+    <h2>11. Contact</h2>
+    <p>
+      If you have any questions about this Privacy Policy, please contact us at:<br>
+      <a href="mailto:support@thorleypark.com">support@thorleypark.com</a>
+    </p>
+
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">
+        <div class="footer-logo-icon">🍊</div>
+        Sorted
+      </a>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <span>© 2026 Thorley Park. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
