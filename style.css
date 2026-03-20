@@ -184,8 +184,8 @@ nav {
   -webkit-flex-direction: column;
   flex-direction: column;
   will-change: transform;
-  -webkit-animation: scroll-track 1.75s linear infinite;
-  animation: scroll-track 1.75s linear infinite;
+  -webkit-animation: scroll-track 6s linear infinite;
+  animation: scroll-track 6s linear infinite;
 }
 
 .eyebrow-track span {
@@ -472,45 +472,6 @@ nav {
 @keyframes cta-scroll {
   from { transform: translateY(0); }
   to   { transform: translateY(calc(-5 * 1.15em)); }
-}
-
-/* ── Scroll-to-footer indicator ───────────────────────────────────────────── */
-
-.scroll-to-footer {
-  background: var(--choc);
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  height: 0;
-  position: relative;
-}
-
-.scroll-down-btn {
-  position: absolute;
-  top: -22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: var(--choc);
-  color: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: color 0.2s, transform 0.2s;
-  animation: bounce-down 1.8s ease-in-out infinite;
-}
-
-.scroll-down-btn:hover {
-  color: var(--orange);
-  transform: translateY(3px);
-  animation: none;
-}
-
-@keyframes bounce-down {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(5px); }
 }
 
 /* ── Footer ───────────────────────────────────────────────────────────────── */
