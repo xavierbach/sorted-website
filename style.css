@@ -184,8 +184,8 @@ nav {
   -webkit-flex-direction: column;
   flex-direction: column;
   will-change: transform;
-  -webkit-animation: scroll-track 6s linear infinite;
-  animation: scroll-track 6s linear infinite;
+  -webkit-animation: scroll-track 9s linear infinite;
+  animation: scroll-track 9s linear infinite;
 }
 
 .eyebrow-track span {
@@ -466,7 +466,6 @@ nav {
   line-height: 1.15em;
   white-space: nowrap;
   color: rgba(255,255,255,0.95);
-  font-style: italic;
 }
 
 @keyframes cta-scroll {
