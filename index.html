@@ -44,50 +44,19 @@
         automatically adds every event straight to your iPhone calendar.
         Powered by AI. Takes seconds.
       </p>
-      <div class="hero-actions">
-        <a href="#download" class="appstore-badge" id="download">
-          <!-- Apple App Store badge SVG inline so no external dependency -->
-          <svg width="156" height="52" viewBox="0 0 156 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="156" height="52" rx="10" fill="#000"/>
-            <text x="50" y="20" font-family="-apple-system,sans-serif" font-size="9" fill="white" opacity="0.8">Download on the</text>
-            <text x="44" y="37" font-family="-apple-system,sans-serif" font-size="18" font-weight="600" fill="white">App Store</text>
-            <text x="18" y="36" font-family="-apple-system,sans-serif" font-size="28" fill="white"></text>
-          </svg>
+      <div class="hero-actions" id="download">
+        <a href="#download" class="appstore-badge">
+          <img src="appstore-badge.svg" alt="Download on the App Store" height="52" />
         </a>
       </div>
 
-      <!-- Phone mockup -->
-      <div class="phone-mockup">
-        <div class="phone-frame">
-          <div class="phone-screen">
-            <div class="phone-screen-icon"><img src="icon.png" alt="Sorted" /></div>
-            <div class="phone-screen-title">3 events found</div>
-
-            <div class="phone-event-card">
-              <div class="phone-event-dot" style="background:#F97316"></div>
-              <div class="phone-event-text">
-                <div class="phone-event-name">🏃 Sports Carnival</div>
-                <div class="phone-event-date">Fri 14 Mar · All day</div>
-              </div>
-            </div>
-
-            <div class="phone-event-card">
-              <div class="phone-event-dot" style="background:#6B8F71"></div>
-              <div class="phone-event-text">
-                <div class="phone-event-name">🚌 Year 4 Excursion</div>
-                <div class="phone-event-date">Tue 18 Mar · All day</div>
-              </div>
-            </div>
-
-            <div class="phone-event-card">
-              <div class="phone-event-dot" style="background:#F97316"></div>
-              <div class="phone-event-text">
-                <div class="phone-event-name">📋 Parent–Teacher</div>
-                <div class="phone-event-date">Wed 26 Mar · 4:00 PM</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Hero event preview strip -->
+      <div class="hero-events">
+        <div class="hero-event-pill">🏃 Sports Carnival <span>Fri 14 Mar</span></div>
+        <div class="hero-event-pill">🚌 Year 4 Excursion <span>Tue 18 Mar</span></div>
+        <div class="hero-event-pill">📋 Parent–Teacher Night <span>Wed 26 Mar · 4 PM</span></div>
+        <div class="hero-event-pill">🐣 Easter Break <span>Mon 14 Apr</span></div>
+        <div class="hero-event-pill">📷 Photo Day <span>Thu 1 May</span></div>
       </div>
     </div>
   </section>
