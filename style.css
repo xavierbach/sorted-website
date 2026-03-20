@@ -184,8 +184,8 @@ nav {
   -webkit-flex-direction: column;
   flex-direction: column;
   will-change: transform;
-  -webkit-animation: scroll-track 14s linear infinite;
-  animation: scroll-track 14s linear infinite;
+  -webkit-animation: scroll-track 7s linear infinite;
+  animation: scroll-track 7s linear infinite;
 }
 
 .eyebrow-track span {
@@ -338,7 +338,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.step-icon { font-size: 2rem; margin-bottom: 14px; }
+.step-icon { font-size: 2rem; margin-bottom: 14px; line-height: 1; color: var(--accent); }
 
 .step h3 {
   font-size: 1.05rem;
@@ -381,6 +381,8 @@ nav {
   font-size: 2rem;
   margin-bottom: 16px;
   display: block;
+  line-height: 1;
+  color: var(--accent);
 }
 
 .feature-card h3 {
