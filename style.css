@@ -380,23 +380,26 @@ nav {
 }
 
 /* Screenshot carousel */
+.carousel-clip {
+  width: 100%;
+  overflow: hidden;
+}
+
 .screenshot-track {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 300%;
-  transform: translateX(0);
   transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
 .screenshot-track img {
-  width: 33.333% !important;
-  max-width: 33.333% !important;
+  flex: 0 0 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   height: auto;
   display: block;
   border-radius: 42px;
-  flex-shrink: 0;
 }
 
 .carousel-dots {

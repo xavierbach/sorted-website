@@ -59,10 +59,12 @@
       <!-- Real app screenshot in phone frame -->
       <div class="hero-phone">
         <div class="hero-phone-frame">
-          <div class="screenshot-track">
-            <img src="screenshot.png"  alt="Sorted app – events list" />
-            <img src="screenshot2.png" alt="Sorted app – import view" />
-            <img src="screenshot3.png" alt="Sorted app – calendar view" />
+          <div class="carousel-clip">
+            <div class="screenshot-track">
+              <img src="screenshot.png"  alt="Sorted app – events list" />
+              <img src="screenshot2.png" alt="Sorted app – import view" />
+              <img src="screenshot3.png" alt="Sorted app – calendar view" />
+            </div>
           </div>
         </div>
         <div class="carousel-dots" aria-hidden="true">
@@ -198,6 +200,7 @@
 
     // Screenshot carousel
     (function () {
+      const clip  = document.querySelector('.carousel-clip');
       const track = document.querySelector('.screenshot-track');
       const dots  = document.querySelectorAll('.dot');
       const total = 3;
@@ -205,7 +208,7 @@
 
       function goTo(n) {
         current = (n + total) % total;
-        track.style.transform = `translateX(-${current * (100 / total)}%)`;
+        track.style.transform = `translateX(-${current * clip.offsetWidth}px)`;
         dots.forEach((d, i) => d.classList.toggle('active', i === current));
       }
 
