@@ -212,23 +212,25 @@
         current = Math.max(0, Math.min(n, total - 1));
         track.style.transform = `translateX(-${current * clip.offsetWidth}px)`;
         dots.forEach((d, i) => d.classList.toggle('active', i === current));
-        if (manual) { finished = false; }
+        if (manual) finished = false;
+      }
+
+      function advance() {
+        if (current >= total - 1) {
+          pause();
+          finished = true;
+          setTimeout(() => goTo(0), 500);
+        } else {
+          goTo(current + 1);
+        }
       }
 
       function play() {
         pause();
         if (finished) return;
-        timer = setInterval(() => {
-          if (current >= total - 1) {
-            // Reached last slide — snap back to first and stop
-            pause();
-            finished = true;
-            setTimeout(() => goTo(0), 600);
-          } else {
-            goTo(current + 1);
-          }
-        }, 3500);
+        timer = setInterval(advance, 3000);
       }
+
       function pause() { clearInterval(timer); }
 
       dots.forEach(d => d.addEventListener('click', () => {
@@ -238,7 +240,7 @@
       // Swipe support
       let x0 = null;
       track.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; pause(); }, { passive: true });
-      track.addEventListener('touchend',   e => {
+      track.addEventListener('touchend', e => {
         if (x0 === null) return;
         const dx = x0 - e.changedTouches[0].clientX;
         if (Math.abs(dx) > 40) goTo(current + (dx > 0 ? 1 : -1), true);
@@ -250,11 +252,11 @@
       phone.addEventListener('mouseenter', pause);
       phone.addEventListener('mouseleave', () => { if (!finished) play(); });
 
-      // Start 0.7s after 60% of phone frame is in view
+      // 0.7s after 60% of phone is in view: advance immediately then continue every 3s
       const observer = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
           observer.disconnect();
-          setTimeout(play, 700);
+          setTimeout(() => { advance(); play(); }, 700);
         }
       }, { threshold: 0.6 });
       observer.observe(phone);
