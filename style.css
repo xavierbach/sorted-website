@@ -132,6 +132,14 @@ nav {
   box-shadow: 0 4px 16px rgba(249,115,22,0.35);
 }
 
+/* Nav Download button: dark text, white on hover */
+.nav-links .btn-primary { color: var(--choc); }
+.nav-links .btn-primary:hover { color: #fff; }
+
+/* Prose pages: prevent orange link colour bleeding into buttons */
+.prose-body .btn-primary { color: #fff; }
+.prose-body .btn-primary:hover { color: #fff; }
+
 .btn-outline {
   background: transparent;
   color: var(--orange);
