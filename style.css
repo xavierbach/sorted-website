@@ -377,6 +377,47 @@ nav {
   display: block;
 }
 
+/* Screenshot carousel */
+.screenshot-track {
+  display: flex;
+  width: 300%;
+  transform: translateX(0);
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.screenshot-track img {
+  width: 33.333%;
+  height: auto;
+  display: block;
+  border-radius: 42px;
+  flex-shrink: 0;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background: var(--border);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.dot.active {
+  width: 22px;
+  background: var(--orange);
+}
+
 @media (max-width: 640px) {
   .hero-phone-frame { width: 220px; max-width: 220px; border-radius: 40px; padding: 8px; }
   .hero-phone-frame img { border-radius: 34px; }

@@ -59,7 +59,16 @@
       <!-- Real app screenshot in phone frame -->
       <div class="hero-phone">
         <div class="hero-phone-frame">
-          <img src="screenshot.png" alt="Sorted app showing school events" />
+          <div class="screenshot-track">
+            <img src="screenshot.png"  alt="Sorted app – events list" />
+            <img src="screenshot2.png" alt="Sorted app – import view" />
+            <img src="screenshot3.png" alt="Sorted app – calendar view" />
+          </div>
+        </div>
+        <div class="carousel-dots" aria-hidden="true">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot"        data-index="1"></button>
+          <button class="dot"        data-index="2"></button>
         </div>
       </div>
 
@@ -186,6 +195,44 @@
         toggle.querySelector('i').className = 'ph ph-list';
       });
     });
+
+    // Screenshot carousel
+    (function () {
+      const track = document.querySelector('.screenshot-track');
+      const dots  = document.querySelectorAll('.dot');
+      const total = 3;
+      let current = 0, timer;
+
+      function goTo(n) {
+        current = (n + total) % total;
+        track.style.transform = `translateX(-${current * (100 / total)}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      function play()  { timer = setInterval(() => goTo(current + 1), 3500); }
+      function pause() { clearInterval(timer); }
+
+      dots.forEach(d => d.addEventListener('click', () => {
+        pause(); goTo(+d.dataset.index); play();
+      }));
+
+      // Swipe support
+      let x0 = null;
+      track.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; pause(); }, { passive: true });
+      track.addEventListener('touchend',   e => {
+        if (x0 === null) return;
+        const dx = x0 - e.changedTouches[0].clientX;
+        if (Math.abs(dx) > 40) goTo(current + (dx > 0 ? 1 : -1));
+        x0 = null; play();
+      }, { passive: true });
+
+      // Pause on hover
+      const phone = document.querySelector('.hero-phone');
+      phone.addEventListener('mouseenter', pause);
+      phone.addEventListener('mouseleave', play);
+
+      play();
+    })();
 
     // Early access form — show success inline without page reload
     const earlyForm = document.querySelector('.early-access-form');
