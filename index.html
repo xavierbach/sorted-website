@@ -263,6 +263,17 @@
       observer.observe(headline);
     })();
 
+    // Scroll #download links so the form is vertically centred in the viewport
+    document.querySelectorAll('a[href="#download"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const el = document.getElementById('download');
+        const rect = el.getBoundingClientRect();
+        const centred = window.pageYOffset + rect.top - (window.innerHeight / 2) + (rect.height / 2);
+        window.scrollTo({ top: centred, behavior: 'smooth' });
+      });
+    });
+
     // Early access form — show success inline without page reload
     const earlyForm = document.querySelector('.early-access-form');
     if (earlyForm) {
