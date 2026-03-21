@@ -450,7 +450,7 @@ nav {
 .cta-cycle-track {
   display: flex;
   flex-direction: column;
-  animation: cta-scroll 2.4s linear infinite;
+  animation: cta-scroll 7.5s linear infinite;
   will-change: transform;
 }
 
@@ -463,8 +463,17 @@ nav {
 }
 
 @keyframes cta-scroll {
-  from { transform: translateY(0); }
-  to   { transform: translateY(calc(-5 * 1.15em)); }
+  0%      { transform: translateY(0);        animation-timing-function: linear; }
+  14.667% { transform: translateY(0);        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  20%     { transform: translateY(-1.15em);  animation-timing-function: linear; }
+  34.667% { transform: translateY(-1.15em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  40%     { transform: translateY(-2.3em);   animation-timing-function: linear; }
+  54.667% { transform: translateY(-2.3em);   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  60%     { transform: translateY(-3.45em);  animation-timing-function: linear; }
+  74.667% { transform: translateY(-3.45em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  80%     { transform: translateY(-4.6em);   animation-timing-function: linear; }
+  94.667% { transform: translateY(-4.6em);   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  100%    { transform: translateY(-5.75em); }
 }
 
 /* ── Footer ───────────────────────────────────────────────────────────────── */
