@@ -295,6 +295,13 @@ nav {
 }
 
 /* Early access form */
+.early-access-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  scroll-margin-top: 80px;
+}
+
 .early-access-form {
   display: flex;
   flex-direction: column;
@@ -302,8 +309,6 @@ nav {
   gap: 10px;
   width: 100%;
   max-width: 480px;
-  margin: 0 auto;
-  scroll-margin-top: 80px;
 }
 
 .early-access-eyebrow {
@@ -347,7 +352,7 @@ nav {
   display: flex;
   justify-content: center;
   margin-top: 8px;
-  margin-bottom: 56px;
+  margin-bottom: 72px;
 }
 
 .hero-phone-frame {
