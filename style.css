@@ -684,6 +684,7 @@ footer {
 
   /* Reduce font so longest phrase fits; flex-centering clips symmetrically if it doesn't */
   .hero h1 { font-size: clamp(1.7rem, 6vw, 3.8rem); }
+  .hero h1 .sorted-word { font-size: 1.5em; }
   .h1-track span { display: flex; justify-content: center; align-items: center; }
 
   /* Nav becomes a column so the menu expands below the logo row */
