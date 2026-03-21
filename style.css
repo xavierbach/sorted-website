@@ -302,6 +302,8 @@ nav {
   gap: 10px;
   width: 100%;
   max-width: 480px;
+  margin: 0 auto;
+  scroll-margin-top: 80px;
 }
 
 .early-access-eyebrow {
