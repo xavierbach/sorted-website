@@ -153,7 +153,7 @@ nav {
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0;
   background: var(--orange-light);
   border: 1px solid rgba(249,115,22,0.2);
   color: var(--orange-dark);
@@ -168,9 +168,14 @@ nav {
 }
 
 /* Animated cycling word — single scrolling track, no pauses */
+.eyebrow-static {
+  margin-right: 0.4em;
+}
+
 .eyebrow-cycle {
   display: inline-block;
   height: 1.2em;
+  min-width: 8em;
   overflow: hidden;
   -webkit-clip-path: inset(0);
   clip-path: inset(0);
