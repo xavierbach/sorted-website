@@ -61,9 +61,10 @@
         <div class="hero-phone-frame">
           <div class="carousel-clip">
             <div class="screenshot-track">
-              <img src="screenshot.png"  alt="Sorted app – events list" />
-              <img src="screenshot2.png" alt="Sorted app – import view" />
-              <img src="screenshot3.png" alt="Sorted app – calendar view" />
+              <img src="screenshot.png"   alt="Sorted app – events list" />
+              <img src="screenshot1a.png" alt="Sorted app – detail view" />
+              <img src="screenshot2.png"  alt="Sorted app – import view" />
+              <img src="screenshot3.png"  alt="Sorted app – calendar view" />
             </div>
           </div>
         </div>
@@ -71,6 +72,7 @@
           <button class="dot active" data-index="0"></button>
           <button class="dot"        data-index="1"></button>
           <button class="dot"        data-index="2"></button>
+          <button class="dot"        data-index="3"></button>
         </div>
       </div>
 
@@ -203,20 +205,34 @@
       const clip  = document.querySelector('.carousel-clip');
       const track = document.querySelector('.screenshot-track');
       const dots  = document.querySelectorAll('.dot');
-      const total = 3;
-      let current = 0, timer;
+      const total = 4;
+      let current = 0, timer, finished = false;
 
-      function goTo(n) {
-        current = (n + total) % total;
+      function goTo(n, manual) {
+        current = Math.max(0, Math.min(n, total - 1));
         track.style.transform = `translateX(-${current * clip.offsetWidth}px)`;
         dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        if (manual) { finished = false; }
       }
 
-      function play()  { timer = setInterval(() => goTo(current + 1), 3500); }
+      function play() {
+        pause();
+        if (finished) return;
+        timer = setInterval(() => {
+          if (current >= total - 1) {
+            // Reached last slide — snap back to first and stop
+            pause();
+            finished = true;
+            setTimeout(() => goTo(0), 600);
+          } else {
+            goTo(current + 1);
+          }
+        }, 3500);
+      }
       function pause() { clearInterval(timer); }
 
       dots.forEach(d => d.addEventListener('click', () => {
-        pause(); goTo(+d.dataset.index); play();
+        pause(); goTo(+d.dataset.index, true); play();
       }));
 
       // Swipe support
@@ -225,7 +241,7 @@
       track.addEventListener('touchend',   e => {
         if (x0 === null) return;
         const dx = x0 - e.changedTouches[0].clientX;
-        if (Math.abs(dx) > 40) goTo(current + (dx > 0 ? 1 : -1));
+        if (Math.abs(dx) > 40) goTo(current + (dx > 0 ? 1 : -1), true);
         x0 = null; play();
       }, { passive: true });
 
