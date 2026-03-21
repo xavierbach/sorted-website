@@ -248,9 +248,16 @@
       // Pause on hover
       const phone = document.querySelector('.hero-phone');
       phone.addEventListener('mouseenter', pause);
-      phone.addEventListener('mouseleave', play);
+      phone.addEventListener('mouseleave', () => { if (!finished) play(); });
 
-      play();
+      // Start only when phone frame scrolls into view
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          observer.disconnect();
+          play();
+        }
+      }, { threshold: 0.5 });
+      observer.observe(phone);
     })();
 
     // Early access form — show success inline without page reload
