@@ -184,8 +184,8 @@ nav {
   -webkit-flex-direction: column;
   flex-direction: column;
   will-change: transform;
-  -webkit-animation: scroll-track 12s linear infinite;
-  animation: scroll-track 12s linear infinite;
+  -webkit-animation: scroll-track 9s linear infinite;
+  animation: scroll-track 9s linear infinite;
 }
 
 .eyebrow-track span {
@@ -200,33 +200,33 @@ nav {
 }
 
 @keyframes scroll-track {
-  0%      { transform: translateY(0);             animation-timing-function: linear; }
-  13.333% { transform: translateY(0);             animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  16.667% { transform: translateY(-1.2em);        animation-timing-function: linear; }
-  30%     { transform: translateY(-1.2em);        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  33.333% { transform: translateY(-2.4em);        animation-timing-function: linear; }
-  46.667% { transform: translateY(-2.4em);        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  50%     { transform: translateY(-3.6em);        animation-timing-function: linear; }
-  63.333% { transform: translateY(-3.6em);        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  66.667% { transform: translateY(-4.8em);        animation-timing-function: linear; }
-  80%     { transform: translateY(-4.8em);        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  83.333% { transform: translateY(-6em);          animation-timing-function: linear; }
-  96.667% { transform: translateY(-6em);          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  0%      { transform: translateY(0);      animation-timing-function: linear; }
+  12.222% { transform: translateY(0);      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  16.667% { transform: translateY(-1.2em); animation-timing-function: linear; }
+  28.889% { transform: translateY(-1.2em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  33.333% { transform: translateY(-2.4em); animation-timing-function: linear; }
+  45.556% { transform: translateY(-2.4em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  50%     { transform: translateY(-3.6em); animation-timing-function: linear; }
+  62.222% { transform: translateY(-3.6em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  66.667% { transform: translateY(-4.8em); animation-timing-function: linear; }
+  78.889% { transform: translateY(-4.8em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  83.333% { transform: translateY(-6em);   animation-timing-function: linear; }
+  95.556% { transform: translateY(-6em);   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   100%    { transform: translateY(-7.2em); }
 }
 @-webkit-keyframes scroll-track {
   0%      { -webkit-transform: translateY(0);      animation-timing-function: linear; }
-  13.333% { -webkit-transform: translateY(0);      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  12.222% { -webkit-transform: translateY(0);      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   16.667% { -webkit-transform: translateY(-1.2em); animation-timing-function: linear; }
-  30%     { -webkit-transform: translateY(-1.2em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  28.889% { -webkit-transform: translateY(-1.2em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   33.333% { -webkit-transform: translateY(-2.4em); animation-timing-function: linear; }
-  46.667% { -webkit-transform: translateY(-2.4em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  45.556% { -webkit-transform: translateY(-2.4em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   50%     { -webkit-transform: translateY(-3.6em); animation-timing-function: linear; }
-  63.333% { -webkit-transform: translateY(-3.6em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  62.222% { -webkit-transform: translateY(-3.6em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   66.667% { -webkit-transform: translateY(-4.8em); animation-timing-function: linear; }
-  80%     { -webkit-transform: translateY(-4.8em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  78.889% { -webkit-transform: translateY(-4.8em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   83.333% { -webkit-transform: translateY(-6em);   animation-timing-function: linear; }
-  96.667% { -webkit-transform: translateY(-6em);   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  95.556% { -webkit-transform: translateY(-6em);   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   100%    { -webkit-transform: translateY(-7.2em); }
 }
 
