@@ -453,7 +453,9 @@ nav {
   display: inline-block;
   height: 1.2em;
   overflow: hidden;
-  vertical-align: middle;
+  vertical-align: baseline;
+  position: relative;
+  top: 0.15em;
 }
 
 .cta-cycle-track {
