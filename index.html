@@ -252,14 +252,15 @@
       phone.addEventListener('mouseenter', pause);
       phone.addEventListener('mouseleave', () => { if (!finished) play(); });
 
-      // 0.7s after 60% of phone is in view: advance immediately then continue every 3s
+      // Start 1s after the headline scrolls out of view
+      const headline = document.querySelector('.hero h1');
       const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
+        if (!entries[0].isIntersecting) {
           observer.disconnect();
-          setTimeout(() => { advance(); play(); }, 700);
+          setTimeout(() => { advance(); play(); }, 1000);
         }
-      }, { threshold: 0.6 });
-      observer.observe(phone);
+      }, { threshold: 0 });
+      observer.observe(headline);
     })();
 
     // Early access form — show success inline without page reload
