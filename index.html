@@ -48,9 +48,19 @@
         Powered by AI. Takes seconds.
       </p>
       <div class="hero-actions" id="download">
-        <a href="#download" class="appstore-badge">
-          <img src="appstore-badge.svg" alt="Download on the App Store" height="52" />
-        </a>
+        <div class="appstore-coming">
+          <img src="appstore-badge.svg" alt="Coming to the App Store" height="52" class="badge-greyed" />
+          <span class="coming-label">Coming to the App Store soon</span>
+        </div>
+
+        <form class="early-access-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+          <p class="early-access-eyebrow">Be the first to know when we launch</p>
+          <div class="early-access-row">
+            <input type="email" name="email" placeholder="your@email.com" required />
+            <button type="submit" class="btn btn-primary">Request Early Access</button>
+          </div>
+          <p class="early-access-success" hidden>Thanks! We'll be in touch.</p>
+        </form>
       </div>
 
       <!-- Real app screenshot in phone frame -->
@@ -138,7 +148,7 @@
     <div class="container">
       <h2>Stop missing <span class="cta-cycle-wrap"><span class="cta-cycle"><span class="cta-cycle-track"><span>school</span><span>club</span><span>work</span><span>family</span><span>life</span><span>school</span></span></span></span> events.</h2>
       <p>Free to download. No account needed.</p>
-      <a href="#download" class="btn-white">Download on the App Store</a>
+      <a href="#download" class="btn-white">Request Early Access</a>
     </div>
   </section>
 
@@ -172,6 +182,25 @@
         toggle.querySelector('i').className = 'ph ph-list';
       });
     });
+
+    // Early access form — show success inline without page reload
+    const earlyForm = document.querySelector('.early-access-form');
+    if (earlyForm) {
+      earlyForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(earlyForm);
+        try {
+          await fetch(earlyForm.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+        } catch (_) {}
+        earlyForm.querySelector('.early-access-row').hidden = true;
+        earlyForm.querySelector('.early-access-eyebrow').hidden = true;
+        earlyForm.querySelector('.early-access-success').hidden = false;
+      });
+    }
   </script>
 </body>
 </html>

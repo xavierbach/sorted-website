@@ -248,6 +248,74 @@ nav {
 
 .appstore-badge img { height: 52px; width: auto; }
 
+/* Coming soon badge */
+.appstore-coming {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-greyed {
+  height: 52px;
+  width: auto;
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+
+.coming-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* Early access form */
+.early-access-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.early-access-eyebrow {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.early-access-row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.early-access-row input[type="email"] {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.early-access-row input[type="email"]:focus {
+  border-color: var(--orange);
+}
+
+.early-access-success {
+  font-size: 0.85rem;
+  color: var(--orange);
+  font-weight: 600;
+  margin: 0;
+}
+
 /* Hero phone mockup */
 .hero-phone {
   display: flex;
@@ -686,6 +754,10 @@ footer {
   .hero h1 { font-size: clamp(1.7rem, 6vw, 3.8rem); }
   .hero h1 .sorted-word { font-size: 1.5em; }
   .h1-track span { display: flex; justify-content: center; align-items: center; }
+
+  .early-access-row { flex-direction: column; }
+  .early-access-row input[type="email"],
+  .early-access-row .btn { width: 100%; justify-content: center; }
 
   /* Nav becomes a column so the menu expands below the logo row */
   /* Fully opaque on mobile so open menu doesn't bleed through */
