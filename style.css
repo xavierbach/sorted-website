@@ -150,87 +150,59 @@ nav {
   background: linear-gradient(160deg, var(--orange-light) 0%, var(--bg) 60%);
 }
 
-.hero-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  background: var(--orange-light);
-  border: 1px solid rgba(249,115,22,0.2);
-  color: var(--orange-dark);
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 7px 18px 7px 24px;
-  border-radius: 50px;
-  margin-bottom: 24px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  overflow: hidden;
-}
+/* ── H1 cycling text ──────────────────────────────────────────────────────── */
 
-/* Animated cycling word — single scrolling track, no pauses */
-.eyebrow-static {
-  margin-right: 0.4em;
-}
-
-.eyebrow-cycle {
+.h1-cycle {
   display: inline-block;
-  height: 1.2em;
-  min-width: 8em;
+  height: 1.12em;
   overflow: hidden;
   -webkit-clip-path: inset(0);
   clip-path: inset(0);
+  vertical-align: middle;
 }
 
-.eyebrow-track {
-  display: -webkit-flex;
+.h1-track {
   display: flex;
-  -webkit-flex-direction: column;
   flex-direction: column;
   will-change: transform;
-  -webkit-animation: scroll-track 9s linear infinite;
-  animation: scroll-track 9s linear infinite;
+  animation: h1-scroll 7.5s linear infinite;
+  -webkit-animation: h1-scroll 7.5s linear infinite;
 }
 
-.eyebrow-track span {
+.h1-track span {
   display: block;
-  height: 1.2em;
-  line-height: 1.2em;
+  height: 1.12em;
+  line-height: 1.12em;
   white-space: nowrap;
-  color: var(--orange);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-align: left;
+  text-align: center;
+  color: var(--text);
 }
 
-@keyframes scroll-track {
-  0%      { transform: translateY(0);      animation-timing-function: linear; }
-  12.222% { transform: translateY(0);      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  16.667% { transform: translateY(-1.2em); animation-timing-function: linear; }
-  28.889% { transform: translateY(-1.2em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  33.333% { transform: translateY(-2.4em); animation-timing-function: linear; }
-  45.556% { transform: translateY(-2.4em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  50%     { transform: translateY(-3.6em); animation-timing-function: linear; }
-  62.222% { transform: translateY(-3.6em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  66.667% { transform: translateY(-4.8em); animation-timing-function: linear; }
-  78.889% { transform: translateY(-4.8em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  83.333% { transform: translateY(-6em);   animation-timing-function: linear; }
-  95.556% { transform: translateY(-6em);   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  100%    { transform: translateY(-7.2em); }
+@keyframes h1-scroll {
+  0%      { transform: translateY(0);       animation-timing-function: linear; }
+  14.667% { transform: translateY(0);       animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  20%     { transform: translateY(-1.12em); animation-timing-function: linear; }
+  34.667% { transform: translateY(-1.12em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  40%     { transform: translateY(-2.24em); animation-timing-function: linear; }
+  54.667% { transform: translateY(-2.24em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  60%     { transform: translateY(-3.36em); animation-timing-function: linear; }
+  74.667% { transform: translateY(-3.36em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  80%     { transform: translateY(-4.48em); animation-timing-function: linear; }
+  94.667% { transform: translateY(-4.48em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  100%    { transform: translateY(-5.6em); }
 }
-@-webkit-keyframes scroll-track {
-  0%      { -webkit-transform: translateY(0);      animation-timing-function: linear; }
-  12.222% { -webkit-transform: translateY(0);      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  16.667% { -webkit-transform: translateY(-1.2em); animation-timing-function: linear; }
-  28.889% { -webkit-transform: translateY(-1.2em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  33.333% { -webkit-transform: translateY(-2.4em); animation-timing-function: linear; }
-  45.556% { -webkit-transform: translateY(-2.4em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  50%     { -webkit-transform: translateY(-3.6em); animation-timing-function: linear; }
-  62.222% { -webkit-transform: translateY(-3.6em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  66.667% { -webkit-transform: translateY(-4.8em); animation-timing-function: linear; }
-  78.889% { -webkit-transform: translateY(-4.8em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  83.333% { -webkit-transform: translateY(-6em);   animation-timing-function: linear; }
-  95.556% { -webkit-transform: translateY(-6em);   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  100%    { -webkit-transform: translateY(-7.2em); }
+@-webkit-keyframes h1-scroll {
+  0%      { -webkit-transform: translateY(0);       animation-timing-function: linear; }
+  14.667% { -webkit-transform: translateY(0);       animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  20%     { -webkit-transform: translateY(-1.12em); animation-timing-function: linear; }
+  34.667% { -webkit-transform: translateY(-1.12em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  40%     { -webkit-transform: translateY(-2.24em); animation-timing-function: linear; }
+  54.667% { -webkit-transform: translateY(-2.24em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  60%     { -webkit-transform: translateY(-3.36em); animation-timing-function: linear; }
+  74.667% { -webkit-transform: translateY(-3.36em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  80%     { -webkit-transform: translateY(-4.48em); animation-timing-function: linear; }
+  94.667% { -webkit-transform: translateY(-4.48em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  100%    { -webkit-transform: translateY(-5.6em); }
 }
 
 .hero h1 {
@@ -242,7 +214,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.hero h1 span { color: var(--orange); }
+.hero h1 > span { color: var(--orange); }
 
 .hero-sub {
   font-size: clamp(1rem, 2vw, 1.2rem);
