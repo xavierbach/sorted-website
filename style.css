@@ -670,6 +670,8 @@ footer {
 
   .nav-toggle { display: flex; }
 
+  .h1-cycle { width: 100%; }
+
   .nav-links {
     display: none;
     position: absolute;
