@@ -162,8 +162,8 @@ nav {
 .h1-track {
   display: block;
   will-change: transform;
-  animation: h1-scroll 7.5s linear infinite;
-  -webkit-animation: h1-scroll 7.5s linear infinite;
+  animation: h1-scroll 8s linear infinite;
+  -webkit-animation: h1-scroll 8s linear infinite;
 }
 
 .h1-track span {
@@ -177,28 +177,28 @@ nav {
 
 @keyframes h1-scroll {
   0%      { transform: translateY(0);       animation-timing-function: linear; }
-  14.667% { transform: translateY(0);       animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  20%     { transform: translateY(-1.12em); animation-timing-function: linear; }
-  34.667% { transform: translateY(-1.12em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  40%     { transform: translateY(-2.24em); animation-timing-function: linear; }
-  54.667% { transform: translateY(-2.24em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  60%     { transform: translateY(-3.36em); animation-timing-function: linear; }
-  74.667% { transform: translateY(-3.36em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  80%     { transform: translateY(-4.48em); animation-timing-function: linear; }
-  94.667% { transform: translateY(-4.48em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  13.75%  { transform: translateY(0);       animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  18.75%  { transform: translateY(-1.12em); animation-timing-function: linear; }
+  32.5%   { transform: translateY(-1.12em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  37.5%   { transform: translateY(-2.24em); animation-timing-function: linear; }
+  51.25%  { transform: translateY(-2.24em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  56.25%  { transform: translateY(-3.36em); animation-timing-function: linear; }
+  70%     { transform: translateY(-3.36em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  75%     { transform: translateY(-4.48em); animation-timing-function: linear; }
+  95%     { transform: translateY(-4.48em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   100%    { transform: translateY(-5.6em); }
 }
 @-webkit-keyframes h1-scroll {
   0%      { -webkit-transform: translateY(0);       animation-timing-function: linear; }
-  14.667% { -webkit-transform: translateY(0);       animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  20%     { -webkit-transform: translateY(-1.12em); animation-timing-function: linear; }
-  34.667% { -webkit-transform: translateY(-1.12em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  40%     { -webkit-transform: translateY(-2.24em); animation-timing-function: linear; }
-  54.667% { -webkit-transform: translateY(-2.24em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  60%     { -webkit-transform: translateY(-3.36em); animation-timing-function: linear; }
-  74.667% { -webkit-transform: translateY(-3.36em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  80%     { -webkit-transform: translateY(-4.48em); animation-timing-function: linear; }
-  94.667% { -webkit-transform: translateY(-4.48em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  13.75%  { -webkit-transform: translateY(0);       animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  18.75%  { -webkit-transform: translateY(-1.12em); animation-timing-function: linear; }
+  32.5%   { -webkit-transform: translateY(-1.12em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  37.5%   { -webkit-transform: translateY(-2.24em); animation-timing-function: linear; }
+  51.25%  { -webkit-transform: translateY(-2.24em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  56.25%  { -webkit-transform: translateY(-3.36em); animation-timing-function: linear; }
+  70%     { -webkit-transform: translateY(-3.36em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  75%     { -webkit-transform: translateY(-4.48em); animation-timing-function: linear; }
+  95%     { -webkit-transform: translateY(-4.48em); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   100%    { -webkit-transform: translateY(-5.6em); }
 }
 
