@@ -159,7 +159,7 @@ nav {
   color: var(--orange-dark);
   font-size: 0.82rem;
   font-weight: 700;
-  padding: 7px 18px;
+  padding: 7px 18px 7px 24px;
   border-radius: 50px;
   margin-bottom: 24px;
   letter-spacing: 0.08em;
@@ -179,8 +179,6 @@ nav {
   overflow: hidden;
   -webkit-clip-path: inset(0);
   clip-path: inset(0);
-  vertical-align: middle;
-  margin-bottom: -0.1em;
 }
 
 .eyebrow-track {
