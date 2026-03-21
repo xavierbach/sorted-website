@@ -657,8 +657,8 @@ footer {
   border: none;
   cursor: pointer;
   color: var(--text);
-  font-size: 1.5rem;
-  padding: 4px;
+  font-size: 2rem;
+  padding: 8px;
   line-height: 1;
   align-items: center;
   justify-content: center;
@@ -672,20 +672,19 @@ footer {
 
   .h1-cycle { width: 100%; }
 
+  /* Nav becomes a column so the menu expands below the logo row */
+  nav { flex-direction: column; align-items: stretch; }
+
+  .nav-inner { flex-wrap: wrap; }
+
   .nav-links {
     display: none;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
+    width: 100%;
     flex-direction: column;
     gap: 0;
-    background: rgba(250, 250, 248, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 8px 0 16px;
     list-style: none;
+    border-top: 1px solid var(--border);
+    padding: 8px 0 16px;
   }
 
   .nav-links.open { display: flex; }
