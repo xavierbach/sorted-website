@@ -156,14 +156,11 @@ nav {
   display: inline-block;
   height: 1.12em;
   overflow: hidden;
-  -webkit-clip-path: inset(0);
-  clip-path: inset(0);
   vertical-align: middle;
 }
 
 .h1-track {
-  display: flex;
-  flex-direction: column;
+  display: block;
   will-change: transform;
   animation: h1-scroll 7.5s linear infinite;
   -webkit-animation: h1-scroll 7.5s linear infinite;
@@ -214,7 +211,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.hero h1 > span { color: var(--orange); }
+.hero h1 .sorted-word { color: var(--orange); }
 
 .hero-sub {
   font-size: clamp(1rem, 2vw, 1.2rem);
