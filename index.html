@@ -250,13 +250,13 @@
       phone.addEventListener('mouseenter', pause);
       phone.addEventListener('mouseleave', () => { if (!finished) play(); });
 
-      // Start only when phone frame scrolls into view
+      // Start 0.7s after 60% of phone frame is in view
       const observer = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
           observer.disconnect();
-          play();
+          setTimeout(play, 700);
         }
-      }, { threshold: 0.5 });
+      }, { threshold: 0.6 });
       observer.observe(phone);
     })();
 
