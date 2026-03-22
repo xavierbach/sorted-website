@@ -614,17 +614,15 @@ nav {
 /* ── CTA cycling word ─────────────────────────────────────────────────────── */
 
 .cta-cycle-wrap {
-  display: inline-block;
-  position: relative;
+  display: inline;
 }
 
 .cta-cycle {
   display: inline-block;
-  height: 1.2em;
+  height: 1em;
   overflow: hidden;
-  vertical-align: baseline;
-  position: relative;
-  top: 0.3em;
+  vertical-align: text-top;
+  line-height: 1;
 }
 
 .cta-cycle-track {
@@ -636,8 +634,8 @@ nav {
 
 .cta-cycle-track span {
   display: block;
-  height: 1.2em;
-  line-height: 1.2em;
+  height: 1em;
+  line-height: 1em;
   white-space: nowrap;
   color: rgba(255,255,255,0.95);
 }
@@ -645,15 +643,15 @@ nav {
 @keyframes cta-scroll {
   0%      { transform: translateY(0);       animation-timing-function: linear; }
   14.667% { transform: translateY(0);       animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  20%     { transform: translateY(-1.2em);  animation-timing-function: linear; }
-  34.667% { transform: translateY(-1.2em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  40%     { transform: translateY(-2.4em);  animation-timing-function: linear; }
-  54.667% { transform: translateY(-2.4em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  60%     { transform: translateY(-3.6em);  animation-timing-function: linear; }
-  74.667% { transform: translateY(-3.6em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  80%     { transform: translateY(-4.8em);  animation-timing-function: linear; }
-  94.667% { transform: translateY(-4.8em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  100%    { transform: translateY(-6em); }
+  20%     { transform: translateY(-1em);  animation-timing-function: linear; }
+  34.667% { transform: translateY(-1em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  40%     { transform: translateY(-2em);  animation-timing-function: linear; }
+  54.667% { transform: translateY(-2em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  60%     { transform: translateY(-3em);  animation-timing-function: linear; }
+  74.667% { transform: translateY(-3em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  80%     { transform: translateY(-4em);  animation-timing-function: linear; }
+  94.667% { transform: translateY(-4em);  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  100%    { transform: translateY(-5em); }
 }
 
 /* ── Footer ───────────────────────────────────────────────────────────────── */
