@@ -585,6 +585,11 @@ nav {
   line-height: 1.2;
   letter-spacing: -0.025em;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 0.3em;
 }
 
 .cta p {
@@ -618,10 +623,9 @@ nav {
 }
 
 .cta-cycle {
-  display: inline-block;
+  display: block;
   height: 1.2em;
   overflow: hidden;
-  vertical-align: middle;
   transform: translateZ(0); /* force GPU layer — kills ghost artifacts */
 }
 
