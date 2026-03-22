@@ -275,20 +275,16 @@ nav {
 
 .coming-banner {
   position: absolute;
-  bottom: 2px;
-  right: -28px;
-  width: 90px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: var(--orange);
   color: #fff;
-  font-size: 0.36rem;
+  font-size: 0.5rem;
   font-weight: 900;
-  letter-spacing: 0.1em;
-  line-height: 1.4;
+  letter-spacing: 0.15em;
   text-align: center;
-  padding: 3px 0;
-  transform: rotate(45deg);
-  transform-origin: center;
-  pointer-events: none;
+  padding: 4px 0 5px;
 }
 
 /* Divider between badge and form */
