@@ -694,6 +694,12 @@ footer {
 
 .footer-links a:hover { color: rgba(255,255,255,0.9); }
 
+.footer-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 /* ── Prose (privacy / support pages) ─────────────────────────────────────── */
 
 .prose-hero {
