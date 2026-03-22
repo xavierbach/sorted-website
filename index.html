@@ -83,7 +83,13 @@
             <input type="email" name="email" placeholder="your@email.com" required />
             <button type="submit" class="btn btn-primary">Request Early Access</button>
           </div>
-          <p class="early-access-success" hidden>Thanks! We'll be in touch.</p>
+          <div class="early-access-success" hidden>
+            <p class="early-access-thanks">You're in! 🎉</p>
+            <p class="early-access-sub">Download the beta and start scanning your first newsletter.</p>
+            <a href="https://testflight.apple.com/join/qMERyUXu" target="_blank" rel="noopener" class="btn btn-primary early-access-tf-btn">
+              Download on TestFlight
+            </a>
+          </div>
         </form>
       </div>
     </div>
@@ -293,7 +299,9 @@
         } catch (_) {}
         earlyForm.querySelector('.early-access-row').hidden = true;
         earlyForm.querySelector('.early-access-eyebrow').hidden = true;
-        earlyForm.querySelector('.early-access-success').hidden = false;
+        const successEl = earlyForm.querySelector('.early-access-success');
+        successEl.hidden = false;
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     }
   </script>
