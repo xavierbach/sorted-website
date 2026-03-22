@@ -251,8 +251,11 @@ nav {
 /* Coming soon badge */
 .appstore-coming {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .badge-coming-wrap {
