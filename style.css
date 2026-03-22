@@ -889,7 +889,8 @@ footer {
     border-radius: 50px;
   }
 
-  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-inner { display: flex; flex-direction: column; align-items: flex-start; }
+  .footer-inner > *:last-child { text-align: left; }
 
   .phone-frame { width: 220px; height: 440px; }
 }
