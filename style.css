@@ -343,6 +343,7 @@ nav {
   border-color: var(--orange);
 }
 
+.early-access-success[hidden] { display: none; }
 .early-access-success {
   display: flex;
   flex-direction: column;
