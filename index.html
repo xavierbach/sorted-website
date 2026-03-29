@@ -28,8 +28,8 @@
         <li><a href="support.html">Support</a></li>
         <li><a href="privacy.html">Privacy</a></li>
         <li>
-          <a href="#download" class="btn btn-primary" style="padding:8px 18px;">
-            Get Early Access
+          <a href="https://apple.co/4dzYMIr" target="_blank" rel="noopener" class="btn btn-primary" style="padding:8px 18px;">
+            Download
           </a>
         </li>
       </ul>
@@ -48,11 +48,12 @@
         automatically adds every event straight to your phone's native calendar app.<br>
         Powered by AI. Takes seconds.
       </p>
-      <div class="hero-actions">
+      <div class="hero-actions" id="download">
         <div class="appstore-coming">
           <div class="badge-coming-wrap">
-            <img src="appstore-badge.svg" alt="Coming to the App Store" height="52" class="badge-greyed" />
-            <div class="coming-banner">COMING SOON</div>
+            <a href="https://apple.co/4dzYMIr" target="_blank" rel="noopener">
+              <img src="appstore-badge.svg" alt="Download on the App Store" height="52" />
+            </a>
           </div>
           <div class="badge-coming-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Coming to Google Play" height="52" class="badge-greyed" />
@@ -81,22 +82,6 @@
         </div>
       </div>
 
-      <div class="early-access-wrap" id="download">
-        <form class="early-access-form" action="https://formspree.io/f/xeerwjbb" method="POST">
-          <p class="early-access-eyebrow">Now in iPhone beta. Request your early access.</p>
-          <div class="early-access-row">
-            <input type="email" name="email" placeholder="your@email.com" required />
-            <button type="submit" class="btn btn-primary">Request Early Access</button>
-          </div>
-          <div class="early-access-success" hidden>
-            <p class="early-access-thanks">You're in! 🎉</p>
-            <p class="early-access-sub">Download the beta and start scanning your first newsletter.</p>
-            <a href="https://testflight.apple.com/join/qMERyUXu" target="_blank" rel="noopener" class="btn btn-primary early-access-tf-btn">
-              Download on TestFlight
-            </a>
-          </div>
-        </form>
-      </div>
     </div>
   </section>
 
@@ -218,7 +203,7 @@
     <div class="container">
       <h2><span>Stop missing</span><span class="cta-cycle-wrap"><span class="cta-cycle"><span class="cta-cycle-track"><span>school</span><span>club</span><span>work</span><span>family</span><span>life</span><span>school</span></span></span></span><span>events.</span></h2>
       <p>Free to download. No account needed.</p>
-      <a href="#download" class="btn-white">Request Early Access</a>
+      <a href="https://apple.co/4dzYMIr" target="_blank" rel="noopener" class="btn-white">Download Free</a>
     </div>
   </section>
 
@@ -320,37 +305,6 @@
       observer.observe(headline);
     })();
 
-    // Scroll #download links so the form is vertically centred in the viewport
-    document.querySelectorAll('a[href="#download"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const el = document.getElementById('download');
-        const rect = el.getBoundingClientRect();
-        const centred = window.pageYOffset + rect.top - (window.innerHeight / 2) + (rect.height / 2);
-        window.scrollTo({ top: centred, behavior: 'smooth' });
-      });
-    });
-
-    // Early access form — show success inline without page reload
-    const earlyForm = document.querySelector('.early-access-form');
-    if (earlyForm) {
-      earlyForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const data = new FormData(earlyForm);
-        try {
-          await fetch(earlyForm.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          });
-        } catch (_) {}
-        earlyForm.querySelector('.early-access-row').hidden = true;
-        earlyForm.querySelector('.early-access-eyebrow').hidden = true;
-        const successEl = earlyForm.querySelector('.early-access-success');
-        successEl.hidden = false;
-        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-    }
   </script>
 </body>
 </html>
