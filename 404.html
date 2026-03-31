@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Sorted</title>
+  <meta name="description" content="This page doesn't exist. Head back to Sorted — the school newsletter calendar app." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="icon.png" />
+  <style>
+    .four04 {
+      min-height: calc(100vh - 160px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .four04-inner { max-width: 480px; }
+    .four04-code {
+      font-size: clamp(5rem, 18vw, 10rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    .four04 h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--choc);
+    }
+    .four04 p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .four04 .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      transition: background 0.2s;
+    }
+    .four04 .btn-home:hover { background: var(--orange-dark); color: #fff; }
+    .four04-emoji {
+      font-size: 3rem;
+      margin-bottom: 24px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────────── -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon"><img src="icon.png" alt="Sorted" /></div>
+        Sorted
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/support">Support</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── 404 ──────────────────────────────────────────────────────────── -->
+  <section class="four04">
+    <div class="four04-inner">
+      <span class="four04-emoji">📋</span>
+      <div class="four04-code">404</div>
+      <h1>This page didn't make the calendar</h1>
+      <p>Looks like this event was never scheduled. Let's get you back to something that exists.</p>
+      <a href="/" class="btn-home">Back to Sorted</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container footer-inner">
+      <a href="/" class="footer-logo">
+        <div class="footer-logo-icon"><img src="icon.png" alt="Sorted" /></div>
+        Sorted
+      </a>
+      <ul class="footer-links">
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+        <li><a href="/support">Support</a></li>
+      </ul>
+      <span>&copy; 2026 Sorted. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links  = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.querySelector('i').className = open ? 'ph ph-x' : 'ph ph-list';
+    });
+  </script>
+</body>
+</html>
