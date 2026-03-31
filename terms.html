@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Sorted</title>
+  <meta name="description" content="Terms of Service for Sorted — the school newsletter calendar app." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="icon.png" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────────── -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><img src="icon.png" alt="Sorted" /></div>
+        Sorted
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#how-it-works">How it works</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <div class="prose-hero">
+    <div class="container">
+      <h1>Terms of Service</h1>
+      <p>Last updated: March 2026</p>
+    </div>
+  </div>
+
+  <!-- ── Body ─────────────────────────────────────────────────────────── -->
+  <div class="prose-body">
+
+    <h2>1. Acceptance of terms</h2>
+    <p>
+      By downloading or using the Sorted app ("the app"), you agree to these Terms of Service.
+      If you do not agree, please do not use the app.
+    </p>
+
+    <h2>2. What Sorted does</h2>
+    <p>
+      Sorted is an iOS app that helps parents extract calendar events from school newsletters
+      using AI, and save them to their calendar. The app is provided by Xavier Muhlebach ("we", "us", "our").
+    </p>
+
+    <h2>3. Use of the app</h2>
+    <p>You agree to use Sorted only for lawful purposes and in accordance with these terms. You agree not to:</p>
+    <ul>
+      <li>Use the app in any way that violates applicable laws or regulations</li>
+      <li>Attempt to reverse engineer, decompile, or tamper with the app</li>
+      <li>Use the app to process content you do not have the right to process</li>
+      <li>Attempt to gain unauthorised access to any systems connected to the app</li>
+    </ul>
+
+    <h2>4. Google Calendar integration</h2>
+    <p>
+      Sorted offers an optional integration with Google Calendar via OAuth. By connecting your
+      Google account, you authorise Sorted to create, update, and delete calendar events and list
+      your calendars on your behalf. You can revoke this access at any time from the app's Settings
+      screen or from your
+      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions page</a>.
+    </p>
+    <p>
+      Your use of Google Calendar through Sorted is also subject to
+      <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google's Terms of Service</a>.
+    </p>
+
+    <h2>5. In-app purchases</h2>
+    <p>
+      Sorted offers optional in-app purchases including a subscription and a lifetime purchase,
+      processed through Apple's App Store. All purchases are subject to
+      <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener">Apple's Terms and Conditions</a>.
+      We do not process or store any payment information. Refunds are handled by Apple in accordance
+      with their policies.
+    </p>
+
+    <h2>6. AI processing</h2>
+    <p>
+      Sorted uses AI (Anthropic's Claude) to extract event information from newsletters. AI extraction
+      is not perfect — always review extracted events before saving them to your calendar. We are not
+      responsible for errors in AI-extracted event details.
+    </p>
+
+    <h2>7. Disclaimer of warranties</h2>
+    <p>
+      Sorted is provided "as is" without warranties of any kind, express or implied. We do not
+      warrant that the app will be uninterrupted, error-free, or that extracted event data will
+      always be accurate. Use of the app is at your own risk.
+    </p>
+
+    <h2>8. Limitation of liability</h2>
+    <p>
+      To the fullest extent permitted by law, we shall not be liable for any indirect, incidental,
+      special, or consequential damages arising from your use of Sorted, including but not limited to
+      missed events due to incorrect calendar data.
+    </p>
+
+    <h2>9. Changes to these terms</h2>
+    <p>
+      We may update these Terms of Service from time to time. Any changes will be posted on this page
+      with an updated date. Continued use of the app after changes constitutes acceptance of the
+      updated terms.
+    </p>
+
+    <h2>10. Governing law</h2>
+    <p>
+      These terms are governed by the laws of Australia. Any disputes will be subject to the
+      exclusive jurisdiction of the courts of Australia.
+    </p>
+
+    <h2>11. Contact</h2>
+    <p>
+      If you have any questions about these Terms of Service, please contact us at:<br>
+      <a href="mailto:hello@sortedapp.io">hello@sortedapp.io</a>
+    </p>
+
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">
+        <div class="footer-logo-icon"><img src="icon.png" alt="Sorted" /></div>
+        Sorted
+      </a>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <span>© 2026 Sorted. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links  = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.querySelector('i').className = open ? 'ph ph-x' : 'ph ph-list';
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+        toggle.querySelector('i').className = 'ph ph-list';
+      });
+    });
+  </script>
+</body>
+</html>
