@@ -5,19 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sorted — School Newsletters, Sorted.</title>
   <meta name="description" content="Sorted uses AI to read school newsletters, PDFs, photos and websites, then adds every event straight to your iPhone calendar. Free to download." />
+  <link rel="canonical" href="https://sortedapp.io/" />
   <meta property="og:title" content="Sorted — School Newsletters, Sorted." />
   <meta property="og:description" content="AI-powered event importer for busy parents. Snap a photo, share a PDF, or browse a school website — every date lands in your calendar in seconds." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sortedapp.io/" />
+  <meta property="og:image" content="https://sortedapp.io/og-image.png" />
+  <meta property="og:site_name" content="Sorted" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sorted — School Newsletters, Sorted." />
+  <meta name="twitter:description" content="AI-powered event importer for busy parents. Snap a photo, share a PDF, or browse a school website — every date lands in your calendar in seconds." />
+  <meta name="twitter:image" content="https://sortedapp.io/og-image.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="icon.png" />
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sorted",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "iOS 17+",
+    "description": "Sorted uses AI to read school newsletters, PDFs, photos and websites, then adds every event straight to your iPhone calendar.",
+    "url": "https://sortedapp.io",
+    "downloadUrl": "https://apple.co/4dzYMIr",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "AUD",
+      "description": "Free to download with optional annual subscription"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Sorted",
+      "url": "https://sortedapp.io"
+    }
+  }
+  </script>
 </head>
 <body>
 
   <!-- ── Nav ──────────────────────────────────────────────────────────── -->
   <nav>
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">
+      <a href="/" class="nav-logo">
         <div class="nav-logo-icon"><img src="icon.png" alt="Sorted" /></div>
         Sorted
       </a>
@@ -25,8 +56,8 @@
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#use-cases">Use cases</a></li>
         <li><a href="#features">Features</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="/support">Support</a></li>
+        <li><a href="/privacy">Privacy</a></li>
         <li>
           <a href="https://apple.co/4dzYMIr" target="_blank" rel="noopener" class="btn btn-primary" style="padding:8px 18px;">
             Download
@@ -67,10 +98,10 @@
         <div class="hero-phone-frame">
           <div class="carousel-clip">
             <div class="screenshot-track">
-              <img src="screenshot.png"   alt="Sorted app – events list" />
-              <img src="screenshot1a.png" alt="Sorted app – detail view" />
-              <img src="screenshot2.png"  alt="Sorted app – import view" />
-              <img src="screenshot3.png"  alt="Sorted app – calendar view" />
+              <img src="screenshot.webp"   alt="Sorted app – events list"   loading="eager" />
+              <img src="screenshot1a.webp" alt="Sorted app – detail view"  loading="lazy" />
+              <img src="screenshot2.webp"  alt="Sorted app – import view"  loading="lazy" />
+              <img src="screenshot3.webp"  alt="Sorted app – calendar view" loading="lazy" />
             </div>
           </div>
         </div>
@@ -231,14 +262,14 @@
   <!-- ── Footer ─────────────────────────────────────────────────────────── -->
   <footer>
     <div class="container footer-inner">
-      <a href="index.html" class="footer-logo">
+      <a href="/" class="footer-logo">
         <div class="footer-logo-icon"><img src="icon.png" alt="Sorted" /></div>
         Sorted
       </a>
       <ul class="footer-links">
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-        <li><a href="support.html">Support</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+        <li><a href="/support">Support</a></li>
         <li><a href="https://www.instagram.com/sortedapp.io/" target="_blank" rel="noopener" class="footer-instagram">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           Instagram
