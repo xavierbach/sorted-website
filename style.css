@@ -559,10 +559,14 @@ nav {
 }
 
 .calendar-logo img {
-  width: 56px;
-  height: 56px;
+  width: 56px !important;
+  height: 56px !important;
+  min-width: 56px;
+  max-width: 56px !important;
+  max-height: 56px !important;
   border-radius: 12px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .calendar-logo span {
