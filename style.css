@@ -546,7 +546,7 @@ nav {
 .calendar-strip-logos {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 48px;
   flex-wrap: wrap;
 }
@@ -556,6 +556,7 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 80px;
 }
 
 .calendar-logo img {
@@ -573,11 +574,14 @@ nav {
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.4;
 }
 
 @media (max-width: 480px) {
-  .calendar-strip-logos { gap: 32px; }
-  .calendar-logo img { width: 48px; height: 48px; }
+  .calendar-strip-logos { gap: 28px; }
+  .calendar-logo { width: 72px; }
+  .calendar-logo img { width: 48px !important; height: 48px !important; min-width: 48px; max-width: 48px !important; max-height: 48px !important; }
 }
 
 /* ── Features ─────────────────────────────────────────────────────────────── */
