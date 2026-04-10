@@ -33,7 +33,7 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "AUD",
-      "description": "Free to download with optional annual subscription"
+      "description": "Free to download with optional Sorted+ subscription"
     },
     "author": {
       "@type": "Organization",
@@ -96,7 +96,10 @@
       <!-- Real app screenshot in phone frame -->
       <div class="hero-phone">
         <div class="hero-phone-frame">
-          <div class="carousel-clip">
+          <!-- Demo video plays first -->
+          <video class="demo-video" src="demo.mp4" autoplay muted playsinline preload="auto"></video>
+          <!-- Screenshots carousel (hidden until video ends) -->
+          <div class="carousel-clip" style="display:none;">
             <div class="screenshot-track">
               <img src="screenshot.webp"   alt="Sorted app – events list"   loading="eager" />
               <img src="screenshot1a.webp" alt="Sorted app – detail view"  loading="lazy" />
@@ -105,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel-dots" aria-hidden="true">
+        <div class="carousel-dots" aria-hidden="true" style="display:none;">
           <button class="dot active" data-index="0"></button>
           <button class="dot"        data-index="1"></button>
           <button class="dot"        data-index="2"></button>
@@ -242,6 +245,11 @@
           <p>Sorted adds a matching emoji to event titles so your calendar is instantly scannable — 🏏 Cricket, 🎂 Sam's 5th Birthday, 🔬 Science Excursion, and more.</p>
         </div>
         <div class="feature-card">
+          <span class="feature-icon"><i class="ph ph-article"></i></span>
+          <h3>Newsletter summaries <span class="pro-badge">Sorted+</span></h3>
+          <p>After importing, Sorted+ members get an AI-generated summary — key dates, action items, and what matters, without reading the whole thing.</p>
+        </div>
+        <div class="feature-card">
           <span class="feature-icon"><i class="ph ph-lock"></i></span>
           <h3>Private by design</h3>
           <p>Your data is never stored on our servers. Newsletter content is processed and immediately discarded. No accounts, no tracking.</p>
@@ -296,13 +304,16 @@
       });
     });
 
-    // Screenshot carousel
+    // Demo video → Screenshot carousel
     (function () {
+      const video = document.querySelector('.demo-video');
       const clip  = document.querySelector('.carousel-clip');
       const track = document.querySelector('.screenshot-track');
       const dots  = document.querySelectorAll('.dot');
+      const dotsWrap = document.querySelector('.carousel-dots');
       const total = 4;
       let current = 0, timer, finished = false;
+      let carouselStarted = false;
 
       function goTo(n, manual) {
         current = Math.max(0, Math.min(n, total - 1));
@@ -329,6 +340,42 @@
 
       function pause() { clearInterval(timer); }
 
+      function startCarousel() {
+        if (carouselStarted) return;
+        carouselStarted = true;
+        // Crossfade: fade out video, show carousel
+        video.style.transition = 'opacity 0.5s ease';
+        video.style.opacity = '0';
+        clip.style.display = '';
+        clip.style.opacity = '0';
+        clip.style.transition = 'opacity 0.5s ease';
+        requestAnimationFrame(() => {
+          clip.style.opacity = '1';
+          dotsWrap.style.display = '';
+          dotsWrap.style.opacity = '0';
+          dotsWrap.style.transition = 'opacity 0.5s ease';
+          requestAnimationFrame(() => { dotsWrap.style.opacity = '1'; });
+        });
+        setTimeout(() => {
+          video.style.display = 'none';
+          goTo(0);
+          play();
+        }, 600);
+      }
+
+      // When video ends, transition to screenshots
+      video.addEventListener('ended', startCarousel);
+
+      // Fallback: if video fails to load, show carousel immediately
+      video.addEventListener('error', () => {
+        video.style.display = 'none';
+        clip.style.display = '';
+        dotsWrap.style.display = '';
+        goTo(0);
+        play();
+        carouselStarted = true;
+      });
+
       dots.forEach(d => d.addEventListener('click', () => {
         pause(); goTo(+d.dataset.index, true); play();
       }));
@@ -343,20 +390,10 @@
         x0 = null; play();
       }, { passive: true });
 
-      // Pause on hover
+      // Pause carousel on hover (but don't pause video)
       const phone = document.querySelector('.hero-phone');
-      phone.addEventListener('mouseenter', pause);
-      phone.addEventListener('mouseleave', () => { if (!finished) play(); });
-
-      // Start 1s after the headline scrolls out of view
-      const headline = document.querySelector('.hero h1');
-      const observer = new IntersectionObserver((entries) => {
-        if (!entries[0].isIntersecting) {
-          observer.disconnect();
-          setTimeout(() => { advance(); play(); }, 1000);
-        }
-      }, { threshold: 0 });
-      observer.observe(headline);
+      phone.addEventListener('mouseenter', () => { if (carouselStarted) pause(); });
+      phone.addEventListener('mouseleave', () => { if (carouselStarted && !finished) play(); });
     })();
 
   </script>

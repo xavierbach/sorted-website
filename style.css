@@ -400,6 +400,19 @@ nav {
   display: block;
 }
 
+/* Demo video inside phone frame */
+.demo-video {
+  width: 100%;
+  height: auto;
+  border-radius: 42px;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .demo-video { border-radius: 34px; }
+}
+
 /* Screenshot carousel */
 .carousel-clip {
   width: 100%;
@@ -623,6 +636,17 @@ nav {
   color: var(--text);
 }
 
+.pro-badge {
+  font-size: .65em;
+  background: var(--orange);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 700;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
 .feature-card p {
   font-size: 0.88rem;
   color: var(--text-secondary);
@@ -631,7 +655,7 @@ nav {
 
 /* ── Use Cases ────────────────────────────────────────────────────────────── */
 
-.use-cases { background: var(--sage-light); }
+.use-cases { background: #EBF2FF; }
 
 .use-cases-grid {
   display: grid;
@@ -658,7 +682,7 @@ nav {
   margin-bottom: 16px;
   display: block;
   line-height: 1;
-  color: var(--sage);
+  color: #3A86FF;
 }
 
 .use-case-card h3 {
