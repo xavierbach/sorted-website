@@ -1,5 +1,14 @@
 # Changelog
 
+## [Build 101] — 2026-04-19
+- Conversion copy pass: parent-relief tone throughout, less tech language
+- New meta title/description: "Never miss a school date again"
+- Hero eyebrow, paragraph and cycling words updated
+- How it Works, Use Cases and Features sections rewritten for clarity and warmth
+- CTA cycle words updated (school/club/family/kinder/weekend); button updated to "Download on the App Store"
+- Added "Built by a parent who got sick of missing school dates" trust line in CTA
+- Calendar strip label updated to "Works with the calendar you already use"
+
 ## [Build 100] — 2026-04-19
 - Full website redesign: new Plus Jakarta Sans font replacing system font stack
 - Hero rebuilt as 2-column layout — cycling headline left, floating phone mockup right
