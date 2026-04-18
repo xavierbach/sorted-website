@@ -16,6 +16,9 @@
   <meta name="twitter:title" content="Sorted — School Newsletters, Sorted." />
   <meta name="twitter:description" content="AI-powered event importer for busy parents. Snap a photo, share a PDF, or browse a school website — every date lands in your calendar in seconds." />
   <meta name="twitter:image" content="https://sortedapp.io/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="icon.png" />
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
@@ -59,7 +62,7 @@
         <li><a href="/support">Support</a></li>
         <li><a href="/privacy">Privacy</a></li>
         <li>
-          <a href="https://apple.co/4dzYMIr" target="_blank" rel="noopener" class="btn btn-primary" style="padding:8px 18px;">
+          <a href="https://apple.co/4dzYMIr" target="_blank" rel="noopener" class="btn btn-primary nav-download">
             Download
           </a>
         </li>
@@ -72,80 +75,67 @@
 
   <!-- ── Hero ─────────────────────────────────────────────────────────── -->
   <section class="hero">
-    <div class="container">
-      <h1><span class="h1-cycle"><span class="h1-track"><span>School newsletters,</span><span>Club notices,</span><span>Important dates,</span><span>Birthday parties,</span><span>Any event from anywhere,</span><span>School newsletters,</span></span></span><br><span class="sorted-word">sorted.</span></h1>
-      <p class="hero-sub">
-        Snap a photo, share a PDF, or browse straight to a school website — Sorted
-        reads it and adds every event straight to your phone's native calendar app.<br>
-        Powered by AI. Takes seconds.
-      </p>
-      <div class="hero-actions" id="download">
-        <div class="appstore-coming">
-          <div class="badge-coming-wrap">
-            <a href="https://apple.co/4dzYMIr" target="_blank" rel="noopener">
-              <img src="appstore-badge.svg" alt="Download on the App Store" height="52" />
-            </a>
-          </div>
-          <div class="badge-coming-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Coming to Google Play" height="52" class="badge-greyed" />
-            <div class="coming-banner">COMING SOON</div>
-          </div>
-        </div>
-      </div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-container">
 
-      <!-- Real app screenshot in phone frame -->
-      <div class="hero-phone">
-        <div class="hero-phone-frame">
-          <!-- Demo video plays first -->
-          <video class="demo-video" src="demo.mp4" autoplay muted playsinline preload="auto"></video>
-          <!-- Screenshots carousel (hidden until video ends) -->
-          <div class="carousel-clip" style="display:none;">
-            <div class="screenshot-track">
-              <img src="screenshot.webp"   alt="Sorted app – events list"   loading="eager" />
-              <img src="screenshot1a.webp" alt="Sorted app – detail view"  loading="lazy" />
-              <img src="screenshot2.webp"  alt="Sorted app – import view"  loading="lazy" />
-              <img src="screenshot3.webp"  alt="Sorted app – calendar view" loading="lazy" />
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <i class="ph ph-sparkle"></i>
+          AI-powered for busy parents
+        </div>
+        <h1>
+          <span class="h1-cycle"><span class="h1-track"><span>School newsletters,</span><span>Club notices,</span><span>Important dates,</span><span>Birthday parties,</span><span>Any event from anywhere,</span><span>School newsletters,</span></span></span>
+          <span class="sorted-word">sorted.</span>
+        </h1>
+        <p class="hero-sub">
+          Snap a photo, share a PDF, or browse straight to a school website — Sorted
+          reads it and adds every event straight to your phone's native calendar app.
+          Powered by AI. Takes seconds.
+        </p>
+        <div class="hero-actions" id="download">
+          <div class="appstore-coming">
+            <div class="badge-coming-wrap">
+              <a href="https://apple.co/4dzYMIr" target="_blank" rel="noopener">
+                <img src="appstore-badge.svg" alt="Download on the App Store" height="52" />
+              </a>
+            </div>
+            <div class="badge-coming-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Coming to Google Play" height="52" class="badge-greyed" />
+              <div class="coming-banner">COMING SOON</div>
             </div>
           </div>
         </div>
-        <div class="carousel-dots" aria-hidden="true" style="display:none;">
-          <button class="dot active" data-index="0"></button>
-          <button class="dot"        data-index="1"></button>
-          <button class="dot"        data-index="2"></button>
-          <button class="dot"        data-index="3"></button>
+        <div class="hero-trust">
+          <span class="hero-trust-item"><i class="ph ph-check-circle"></i>Free to download</span>
+          <span class="hero-trust-sep" aria-hidden="true">·</span>
+          <span class="hero-trust-item"><i class="ph ph-check-circle"></i>No account needed</span>
+          <span class="hero-trust-sep" aria-hidden="true">·</span>
+          <span class="hero-trust-item"><i class="ph ph-check-circle"></i>Private by design</span>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ── How it works ──────────────────────────────────────────────────── -->
-  <section class="how" id="how-it-works">
-    <div class="container">
-      <div class="section-label">How it works</div>
-      <h2 class="section-title">From newsletter to calendar<br>in three taps</h2>
-      <p class="section-sub">No more manually copying dates. Sorted does the reading so you don't have to.</p>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-icon"><i class="ph ph-file-text"></i></div>
-          <h3>Import any way you like</h3>
-          <p>Snap a photo, share a PDF from Files or Email, or use the built-in browser to import directly from a school website. Share straight from any app using the iOS share sheet.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-icon"><i class="ph ph-sparkle"></i></div>
-          <h3>AI reads it for you</h3>
-          <p>Sorted scans the content and pulls out every event, date, and time — even from scanned pages, handwritten notices, or WhatsApp screenshots.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-icon"><i class="ph ph-calendar-check"></i></div>
-          <h3>Review &amp; save</h3>
-          <p>Tap the events you want to keep and hit Save. They land straight in your calendar — Apple Calendar, Google Calendar, or Outlook — with optional reminders. Add the lock screen widget for one-tap camera access next time.</p>
+      <div class="hero-visual">
+        <div class="hero-phone">
+          <div class="hero-phone-frame">
+            <video class="demo-video" src="demo.mp4" autoplay muted playsinline preload="auto"></video>
+            <div class="carousel-clip" style="display:none;">
+              <div class="screenshot-track">
+                <img src="screenshot.webp"   alt="Sorted app – events list"   loading="eager" />
+                <img src="screenshot1a.webp" alt="Sorted app – detail view"  loading="lazy" />
+                <img src="screenshot2.webp"  alt="Sorted app – import view"  loading="lazy" />
+                <img src="screenshot3.webp"  alt="Sorted app – calendar view" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-dots" aria-hidden="true" style="display:none;">
+            <button class="dot active" data-index="0"></button>
+            <button class="dot"        data-index="1"></button>
+            <button class="dot"        data-index="2"></button>
+            <button class="dot"        data-index="3"></button>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -155,16 +145,48 @@
       <p class="calendar-strip-label">Works with your favourite calendar</p>
       <div class="calendar-strip-logos">
         <div class="calendar-logo">
-          <img src="apple-calendar.png" alt="Apple Calendar" width="56" height="56" />
+          <img src="apple-calendar.png" alt="Apple Calendar" width="52" height="52" />
           <span>Apple Calendar</span>
         </div>
         <div class="calendar-logo">
-          <img src="google-calendar.png" alt="Google Calendar" width="56" height="56" />
+          <img src="google-calendar.png" alt="Google Calendar" width="52" height="52" />
           <span>Google Calendar</span>
         </div>
         <div class="calendar-logo">
-          <img src="outlook-calendar.png" alt="Microsoft Outlook" width="56" height="56" />
+          <img src="outlook-calendar.png" alt="Microsoft Outlook" width="52" height="52" />
           <span>Outlook</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How it works ──────────────────────────────────────────────────── -->
+  <section class="how" id="how-it-works">
+    <div class="container">
+      <div class="section-eyebrow" data-reveal>How it works</div>
+      <h2 class="section-title" data-reveal data-delay="1">From newsletter to calendar<br>in three taps</h2>
+      <p class="section-sub" data-reveal data-delay="2">No more manually copying dates. Sorted does the reading so you don't have to.</p>
+
+      <div class="steps">
+        <div class="step" data-reveal data-delay="1">
+          <div class="step-number">1</div>
+          <div class="step-icon"><i class="ph ph-file-text"></i></div>
+          <h3>Import any way you like</h3>
+          <p>Snap a photo, share a PDF from Files or Email, or use the built-in browser to import directly from a school website. Share straight from any app using the iOS share sheet.</p>
+        </div>
+        <div class="step-arrow" aria-hidden="true"><i class="ph ph-arrow-right"></i></div>
+        <div class="step" data-reveal data-delay="2">
+          <div class="step-number">2</div>
+          <div class="step-icon"><i class="ph ph-sparkle"></i></div>
+          <h3>AI reads it for you</h3>
+          <p>Sorted scans the content and pulls out every event, date, and time — even from scanned pages, handwritten notices, or WhatsApp screenshots.</p>
+        </div>
+        <div class="step-arrow" aria-hidden="true"><i class="ph ph-arrow-right"></i></div>
+        <div class="step" data-reveal data-delay="3">
+          <div class="step-number">3</div>
+          <div class="step-icon"><i class="ph ph-calendar-check"></i></div>
+          <h3>Review &amp; save</h3>
+          <p>Tap the events you want to keep and hit Save. They land straight in your calendar — Apple Calendar, Google Calendar, or Outlook — with optional reminders.</p>
         </div>
       </div>
     </div>
@@ -173,37 +195,37 @@
   <!-- ── Use Cases ─────────────────────────────────────────────────────── -->
   <section class="use-cases" id="use-cases">
     <div class="container">
-      <div class="section-label">Works with anything</div>
-      <h2 class="section-title">Wherever the info comes from,<br>Sorted can read it</h2>
-      <p class="section-sub">If you can see it on your screen or print it on a page, Sorted can extract the dates.</p>
+      <div class="section-eyebrow" data-reveal>Works with anything</div>
+      <h2 class="section-title" data-reveal data-delay="1">Wherever the info comes from,<br>Sorted can read it</h2>
+      <p class="section-sub" data-reveal data-delay="2">If you can see it on your screen or print it on a page, Sorted can extract the dates.</p>
 
       <div class="use-cases-grid">
-        <div class="use-case-card">
+        <div class="use-case-card" data-reveal data-delay="1">
           <span class="use-case-icon"><i class="ph ph-newspaper"></i></span>
           <h3>School newsletters</h3>
           <p>PDF emailed home or downloaded from the school portal — share it straight to Sorted and every date is extracted in seconds.</p>
         </div>
-        <div class="use-case-card">
+        <div class="use-case-card" data-reveal data-delay="2">
           <span class="use-case-icon"><i class="ph ph-gift"></i></span>
           <h3>Birthday invitations</h3>
           <p>Got a party invite as a photo or PDF? Import it and the date, time, and location land straight in your calendar.</p>
         </div>
-        <div class="use-case-card">
+        <div class="use-case-card" data-reveal data-delay="3">
           <span class="use-case-icon"><i class="ph ph-image-square"></i></span>
           <h3>Posters &amp; flyers</h3>
           <p>Photograph a notice pinned to the school noticeboard or your fridge and Sorted pulls out what matters.</p>
         </div>
-        <div class="use-case-card">
+        <div class="use-case-card" data-reveal data-delay="4">
           <span class="use-case-icon"><i class="ph ph-chat-circle-dots"></i></span>
           <h3>WhatsApp messages</h3>
           <p>Screenshot a group chat with event details and import the image — Sorted reads it just like any other document.</p>
         </div>
-        <div class="use-case-card">
+        <div class="use-case-card" data-reveal data-delay="5">
           <span class="use-case-icon"><i class="ph ph-globe"></i></span>
           <h3>School websites &amp; portals</h3>
-          <p>Screenshot a calendar or timetable from your school app, or use Sorted's built-in browser to import directly from NAAVI or any web-based newsletter — whichever is quicker.</p>
+          <p>Use Sorted's built-in browser to import directly from any school website or portal — whichever is quicker.</p>
         </div>
-        <div class="use-case-card">
+        <div class="use-case-card" data-reveal data-delay="6">
           <span class="use-case-icon"><i class="ph ph-envelope-open"></i></span>
           <h3>Emails</h3>
           <p>Save an event email as a PDF or screenshot it and import — no more hunting back through your inbox for a date.</p>
@@ -215,53 +237,69 @@
   <!-- ── Features ──────────────────────────────────────────────────────── -->
   <section class="features" id="features">
     <div class="container">
-      <div class="section-label">Features</div>
-      <h2 class="section-title">Everything a busy parent needs</h2>
+      <div class="section-eyebrow" data-reveal>Features</div>
+      <h2 class="section-title" data-reveal data-delay="1">Everything a busy parent needs</h2>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <span class="feature-icon"><i class="ph ph-robot"></i></span>
+      <div class="bento-grid" data-reveal data-delay="2">
+
+        <!-- Row 1 -->
+        <div class="bento-card bento-span2">
+          <span class="bento-icon"><i class="ph ph-robot"></i></span>
           <h3>AI-powered extraction</h3>
-          <p>Uses advanced AI to read newsletters accurately, even when dates are written in natural language like "the last Friday of term".</p>
+          <p>Uses advanced AI to read newsletters accurately, even when dates are written in natural language like "the last Friday of term". Handles photos, PDFs, scanned pages, and more.</p>
+          <div class="bento-tag">Powered by Claude AI</div>
         </div>
-        <div class="feature-card">
-          <span class="feature-icon"><i class="ph ph-image"></i></span>
-          <h3>Every format supported</h3>
-          <p>Photos, PDFs, web pages, screenshots — share from any app or import directly. The original photo or PDF is saved inside Sorted and linked back to your calendar event so you can always find it again.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon"><i class="ph ph-users-three"></i></span>
-          <h3>Profiles for every child</h3>
-          <p>Create colour-coded profiles for each child and link their school, kinder, or care service. Events are tagged to the right child and land in the right calendar — perfect for families juggling multiple schools.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon"><i class="ph ph-bell"></i></span>
-          <h3>Smart reminders &amp; widget</h3>
-          <p>Set reminders days in advance — automatically added when you save. Add the lock screen widget for one-tap camera access, so you can capture a notice before you've even unlocked your phone.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon"><i class="ph ph-smiley"></i></span>
-          <h3>Emoji event titles</h3>
-          <p>Sorted adds a matching emoji to event titles so your calendar is instantly scannable — 🏏 Cricket, 🎂 Sam's 5th Birthday, 🔬 Science Excursion, and more.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon"><i class="ph ph-article"></i></span>
-          <h3>Newsletter summaries <span class="pro-badge">Sorted+</span></h3>
-          <p>After importing, Sorted+ members get an AI-generated summary — key dates, action items, and what matters, without reading the whole thing.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon"><i class="ph ph-lock"></i></span>
+
+        <div class="bento-card bento-dark">
+          <span class="bento-icon"><i class="ph ph-lock"></i></span>
           <h3>Private by design</h3>
           <p>Your data is never stored on our servers. Newsletter content is processed and immediately discarded. No accounts, no tracking.</p>
         </div>
+
+        <!-- Row 2 -->
+        <div class="bento-card">
+          <span class="bento-icon"><i class="ph ph-image"></i></span>
+          <h3>Every format supported</h3>
+          <p>Photos, PDFs, web pages, screenshots — share from any app or import directly.</p>
+        </div>
+
+        <div class="bento-card">
+          <span class="bento-icon"><i class="ph ph-users-three"></i></span>
+          <h3>Profiles for every child</h3>
+          <p>Colour-coded profiles for each child. Events are tagged and land in the right calendar automatically.</p>
+        </div>
+
+        <div class="bento-card">
+          <span class="bento-icon"><i class="ph ph-bell"></i></span>
+          <h3>Smart reminders &amp; widget</h3>
+          <p>Reminders added automatically on save. Lock screen widget for one-tap camera access.</p>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="bento-card">
+          <span class="bento-icon"><i class="ph ph-smiley"></i></span>
+          <h3>Emoji event titles</h3>
+          <p>Sorted adds a matching emoji to every event title — 🏏 Cricket, 🎂 Birthday, 🔬 Excursion — so your calendar is instantly scannable.</p>
+        </div>
+
+        <div class="bento-card bento-span2 bento-plus">
+          <div class="bento-plus-header">
+            <span class="bento-icon"><i class="ph ph-article"></i></span>
+            <span class="pro-badge">Sorted+</span>
+          </div>
+          <h3>Newsletter summaries</h3>
+          <p>After importing, Sorted+ members get an AI-generated summary — key dates, action items, and what matters, without reading the whole thing.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ── CTA ────────────────────────────────────────────────────────────── -->
   <section class="cta">
+    <div class="cta-glow" aria-hidden="true"></div>
     <div class="container">
-      <h2><span>Stop missing</span><span class="cta-cycle-wrap"><span class="cta-cycle"><span class="cta-cycle-track"><span>school</span><span>club</span><span>work</span><span>family</span><span>life</span><span>school</span></span></span></span><span>events.</span></h2>
+      <h2><span>Stop missing </span><span class="cta-cycle-wrap"><span class="cta-cycle"><span class="cta-cycle-track"><span>school</span><span>club</span><span>work</span><span>family</span><span>life</span><span>school</span></span></span></span><span> events.</span></h2>
       <p>Free to download. No account needed.</p>
       <a href="https://apple.co/4dzYMIr" target="_blank" rel="noopener" class="btn-white">Download Free</a>
     </div>
@@ -294,6 +332,7 @@
   </footer>
 
   <script>
+    // Nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const links  = document.querySelector('.nav-links');
     toggle.addEventListener('click', () => {
@@ -308,6 +347,17 @@
         toggle.querySelector('i').className = 'ph ph-list';
       });
     });
+
+    // Scroll reveal
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObs.observe(el));
 
     // Demo video → Screenshot carousel
     (function () {
@@ -348,7 +398,6 @@
       function startCarousel() {
         if (carouselStarted) return;
         carouselStarted = true;
-        // Crossfade: fade out video, show carousel
         video.style.transition = 'opacity 0.5s ease';
         video.style.opacity = '0';
         clip.style.display = '';
@@ -368,10 +417,7 @@
         }, 600);
       }
 
-      // When video ends, transition to screenshots
       video.addEventListener('ended', startCarousel);
-
-      // Fallback: if video fails to load, show carousel immediately
       video.addEventListener('error', () => {
         video.style.display = 'none';
         clip.style.display = '';
@@ -385,7 +431,6 @@
         pause(); goTo(+d.dataset.index, true); play();
       }));
 
-      // Swipe support
       let x0 = null;
       track.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; pause(); }, { passive: true });
       track.addEventListener('touchend', e => {
@@ -395,12 +440,10 @@
         x0 = null; play();
       }, { passive: true });
 
-      // Pause carousel on hover (but don't pause video)
       const phone = document.querySelector('.hero-phone');
       phone.addEventListener('mouseenter', () => { if (carouselStarted) pause(); });
       phone.addEventListener('mouseleave', () => { if (carouselStarted && !finished) play(); });
     })();
-
   </script>
 </body>
 </html>
