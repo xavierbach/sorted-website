@@ -1,5 +1,8 @@
 # Changelog
 
+## [Build 103] — 2026-04-30
+- Pricing section copy fix: "Free to start. Easy to keep going." with subtitle that names the actual offer ("Try Sorted free — 10 imports, no card, no account. Hooked? Sorted+ is just $1.99 a month or $17.99 a year") — replaces the misleading "most families never go near the limit" line that didn't fit a 10-import trial
+
 ## [Build 102] — 2026-04-30
 - Added Pricing section with four tiers (AUD): Free Trial ($0, 10 imports to try), Sorted+ Monthly ($1.99/mo), Sorted+ Annual ($17.99/yr, highlighted as Most Popular · Save 25%), Sorted+ Lifetime ($79.99 once)
 - Pricing card grid matches bento/use-case styling; featured Annual card has orange border, filled CTA, and white-on-orange "Most popular" badge
