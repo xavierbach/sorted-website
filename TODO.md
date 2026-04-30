@@ -8,6 +8,7 @@
 - Update og-image.png to reflect the new hero design
 
 ## Done
+- [x] Add Pricing section with Free / Monthly / Annual / Lifetime tiers and AUD prices, highlighted Annual as Most Popular
 - [x] Add demo video to phone mockup with carousel transition
 - [x] Update Use Cases section to light blue background
 - [x] Full website redesign — 2-col hero, bento grid features, Plus Jakarta Sans font, scroll reveal

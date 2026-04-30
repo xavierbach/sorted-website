@@ -1,5 +1,13 @@
 # Changelog
 
+## [Build 102] — 2026-04-30
+- Added Pricing section with four tiers (AUD): Free Trial ($0, 10 imports to try), Sorted+ Monthly ($1.99/mo), Sorted+ Annual ($17.99/yr, highlighted as Most Popular · Save 25%), Sorted+ Lifetime ($79.99 once)
+- Pricing card grid matches bento/use-case styling; featured Annual card has orange border, filled CTA, and white-on-orange "Most popular" badge
+- Added "Pricing" link to nav
+- Footnote on Import Boost ($2.99 add-on for Sorted+ subscribers — 125 extra imports for 30 days)
+- Updated Schema.org JSON-LD `offers` to an array reflecting the four real App Store Connect product prices in AUD
+- Responsive breakpoints: 4-up on desktop, 2-up at ≤860px, 1-up at ≤640px
+
 ## [Build 101] — 2026-04-19
 - Conversion copy pass: parent-relief tone throughout, less tech language
 - New meta title/description: "Never miss a school date again"
